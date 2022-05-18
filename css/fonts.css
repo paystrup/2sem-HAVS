@@ -1,0 +1,56 @@
+/* IMPORT FONTS FRA /FONTS MAPPEN - INDSÆTTES I STYLES.CSS*/
+@font-face {
+    font-family: 'CircularStd';
+    src: url('fonts/CircularStd-Medium.woff') format('woff'),
+        url('fonts/CircularStd-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saol Display';
+    src: url('fonts/SaolDisplay-Regular.woff') format('woff'),
+        url('fonts/SaolDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Saol Display';
+    src: url('fonts/SaolDisplay-Regular_1.woff') format('woff'),
+        url('fonts/SaolDisplay-Regular_1.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('fonts/CircularStd-Bold.woff') format('woff'),
+        url('fonts/CircularStd-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('fonts/CircularStd-Black.woff') format('woff'),
+        url('fonts/CircularStd-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url('fonts/CircularStd-Book.woff') format('woff'),
+        url('fonts/CircularStd-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd';
+    src: url('fonts/CircularStd-Black_1.woff') format('woff'),
+        url('fonts/CircularStd-Black_1.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
