@@ -19,6 +19,7 @@
     font-family: 'Saol Display';
     src: url('fonts/SaolDisplay-Regular_1.woff') format('woff'),
         url('fonts/SaolDisplay-Regular_1.ttf') format('truetype');
+    font-weight: lighter;
     font-style: normal;
 }
 

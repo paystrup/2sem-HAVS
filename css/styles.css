@@ -18,6 +18,7 @@ html{
 
 /* VARIABLER*/
 :root {
+    color: var(--black);
     /* Farver */
     --blue: #0E47FF;
     --lightblue: #F4F6FD;
@@ -40,6 +41,7 @@ html{
     --lineheight: 160%;
 
     /* Whitespace */
+    --sectionpadding: 10rem 12rem;
 }
 
 /*Baggrund */
@@ -60,7 +62,7 @@ p{
 
 
 /* BUTTONS */
-#buttonBlue{
+#buttonFooter{
     font-family: var(--mainfont);
     white-space: nowrap;
     display: flex;
@@ -76,10 +78,12 @@ p{
     text-align: center;
 }
 
+
 #buttonMain{
     font-family: var(--mainfont);
     white-space: nowrap;
     text-decoration: none;
+    border-style: none;
     font-weight: 500;
     padding: 15px 40px;
     font-size: 1em;
@@ -93,6 +97,7 @@ p{
     background: var(--black);
     color: var(--white);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -277,7 +282,6 @@ footer{
 }
 
 #voresaktiviteterBillede{
-    z-index: 99;
     background-image: url('/media/voresaktiviteter.png');
     background-position: center;
     width: 50%;
@@ -370,12 +374,560 @@ footer{
 
 /* MISSION BANNER LANDINGPAGE */
 #missionBanner{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
     background-color: var(--black);
     color: var(--beige);
     font-family: var(--scndfont);
     font-size: 5rem;
-    font-weight: lighter;
+    font-weight: 500;
 }
+
+/* MENUKORT BANNER */
+#menukortBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mbTekst{
+    padding: 10rem 10rem;
+    max-width: 45%;
+}
+
+#mbTekst h2{
+    font-family: var(--mainfont);
+    font-size: 4.2rem;
+    font-weight: 300;
+    padding-bottom: 5rem;
+    text-underline-offset: 0.3rem;
+}
+
+#mbTekst h6{
+    font-family: var(--mainfont);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#mbTekst b{
+    color: var(--black);
+}
+
+#mbTekst p{
+    font-size: 1.1rem;
+    color: var(--gray);
+    padding-bottom: 3.5rem;
+    line-height: var(--lineheight);
+}
+
+#mbGalleri{
+    width: 50%;
+}
+
+#mbGalleri img{
+    max-width: 100%;
+}
+
+/* LOKATIONER - HVIS DU ER I NÆRHEDEN */
+#lokationer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 10rem;
+}
+
+#alleLokationer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+#lokationer h2{
+    font-family: var(--mainfont);
+    font-weight: 300;
+    font-size: 3.5rem;
+    padding-bottom: 3rem;
+}
+
+#lokationerItem{
+    max-width: 50%;
+}
+
+#lokationerItem img{
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+#lokationerTekst{
+    font-family: var(--mainfont);
+    display: flex;
+    justify-content: space-between;
+}
+
+#lokationerTekst p{
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+#lokationerTekst a{
+    color: var(--black);
+    text-decoration: none;
+}
+
+#lokationerTekst a:hover{
+    opacity: 0.5;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* NYHEDSBREV */
+#nyhedsbrevBanner fieldset{
+    border-style: none;
+    border-color: none;
+}
+
+#nyhedsbrevBanner input{
+    border-radius: 8px;
+}
+
+#f2{
+    display: none;
+}
+
+#btn1{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    width: 200px;
+    padding: 15px 40px;
+    font-size: 1em;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;  
+}
+
+#btn1:hover{
+    background: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+/* Header på alle undersider*/
+header{
+    padding-top: 12vh;
+}
+
+/* AKTIVITETER - underside */
+
+#aktivitettop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+}
+
+#aktivitekst{
+    padding-left: 12rem;
+    padding-bottom: 2.5rem;
+}
+
+#aktivitettop h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    max-width: 17ch;
+}
+
+#aktivitettop p{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--gray);
+    max-width: 44ch;
+    padding-bottom: 2.5rem;
+}
+
+#aktivibillede{
+    width: 50%;
+
+}
+
+#aktivibillede img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Veninde dag */
+
+#veninde-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+    height: 50vh;
+    width: 100%;
+}
+
+#venindeBillede{
+    background-image: url('/media/voresaktiviteter.png');
+    background-position: center;
+    width: 50%;
+    height: 100%;
+}
+
+#venindeTekst{
+    background-color: var(--beige);
+    max-width: 50%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+
+#venindeTekst h3{
+    font-family: 'Circular Std Medium', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#venindeTekst p{
+    font-size: 1.1rem;
+    color: var(--gray);
+    padding-bottom: 2.7rem;
+    line-height: var(--lineheight);
+}
+
+/* Kommende events */
+
+#aktiviKommende{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#EventsTekst{
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+#EventsTekst h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3rem;
+
+}
+
+/* Aktiviteter året rundt */
+
+#aktiviRundt{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#Overtekst{
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+#Overtekst h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3rem;
+}
+
+#aktivitet1{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.aktivitetReverse{
+    flex-direction: row-reverse;
+}
+
+#aktivitetbillede1{
+    width: 50%;
+}
+
+#aktivitetbillede1 img{
+    width: 100%;
+    height: 100%;
+}
+
+#aktivitetstekst{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 50%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+
+#aktivitetstekst h4{
+    font-family: 'Circular Std Medium', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+#aktivitetstekst p{
+    font-size: 1.2rem;
+    color: var(--gray);
+    padding-bottom: 2.7rem;
+    line-height: var(--lineheight);
+}
+
+#aktivitetstekst a{
+    color: var(---black);
+    font-size: 1.1rem;
+}
+
+#SocBanner{
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#aktiviteterSome{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#aktiviteterSome svg{
+    height: 30px;
+    fill: var(--white);
+}
+   
+
+
+
+
+/* Om Os - underside */
+
+#hvadErHavs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+}
+
+#hvadtekst{
+    padding-left: 12rem;
+    padding-bottom: 2.5rem;
+}
+
+#hvadErHavs h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    max-width: 17ch;
+}
+
+#hvadErHavs p{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--gray);
+    max-width: 44ch;
+    padding-bottom: 2.5rem;
+}
+
+#hvadhavsBillede{
+    width: 50%;
+}
+
+#hvadhavsBillede img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Vesterhavs stemning banner */
+
+#vesterStemning{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige);
+    height: 50vh;
+    width: 100%;
+}
+
+#vesterBillede{
+    background-image: url('/media/voresaktiviteter.png');
+    background-position: center;
+    width: 50%;
+    height: 100%;
+}
+
+#vesterTekst{
+    background-color: var(--beige);
+    max-width: 50%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+
+#vesterTekst h3{
+    font-family: 'Circular Std Medium', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    
+}
+
+#vesterTekst p{
+    font-size: 1.1rem;
+    color: var(--gray);
+    padding-bottom: 2.7rem;
+    line-height: var(--lineheight);
+}
+
+
+
+/* KONTAKT */
+#KontaktHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    height: 100vh; 
+    background-color: var(--lightgray);
+}
+
+/* KONTAKT - tekst*/
+#kontaktTekstHeader{
+    padding-left: 12rem;
+    padding-bottom: 2.5rem;
+}
+
+#kontaktTekstHeader h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    max-width: 17ch;
+}
+
+#kontaktTekstHeader p{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--gray);
+    max-width: 43ch;
+    padding-bottom: 3rem;
+}
+
+#kontaktIkoner{
+    padding-top: 2em;
+    padding-bottom: 3em;
+}
+
+#kontaktIkoner p{
+    color: var(--gray);
+    font-weight: bold;
+}
+
+#kontaktIkon svg{
+    width: 1.5em;
+}
+
+#kontaktIkon{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#kontaktSome svg{
+    height: 1.7em;
+    fill: var(--blue);
+}
+
+#kontaktSome{
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 2em;
+}
+
+/* KONTAKT - form */
+#kontaktFormHeader{
+    width: 50%;
+    padding-right: 12rem;
+}
+
+#kontaktFormHeader fieldset{
+    border: none;
+}
+
+#kontaktFormHeader label, input, textarea{
+    font-size: 1.1rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--black);
+}
+
+#kontaktFormHeader input, textarea{
+    width: 100%;
+}
+
+#kontaktFormHeader input, textarea{
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+/* Ikoner i placeholder*/ /* https://www.w3schools.com/howto/howto_css_animated_search.asp */
+#navn, #mail, #besked {
+    box-sizing: border-box;
+    border: 2px solid var(--lightgray);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    background-position: 10px 15px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    background-size: 1.1em;
+  } 
+
+#navn {
+    background-image: url('/media/person.svg');
+} 
+
+#mail {
+    background-image: url('/media/envelope.svg');
+    background-position: 10px 17px;
+} 
+
+#besked {
+    background-image: url('/media/message.svg');
+} 
+
 
 
 /* NAVBAR */
