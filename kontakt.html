@@ -10,6 +10,9 @@
     <title>HAVS - Aktiviteter</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- til mapbox - Selvstudiedag 3 d. 15/03 -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 </head>
 <body>
     <main>
@@ -64,7 +67,7 @@
                     <label for="fname">Skriv besked</label><br>
                     <textarea id="besked" name="besked" placeholder="Besked" style="height:200px"></textarea><br><br>
                     
-                    <input id="buttonMain" type="submit" value="Send Besked">
+                    <input id="buttonSubmitKontakt" type="submit" value="Send Besked">
                     
                 </fieldset>
             </form>
@@ -72,22 +75,122 @@
         </div>
     </header>
 
-    <section>
-        <h1>Ofte stillede spørgsmål</h1>
+    <section id="sectionFaq">
+        <h2>Ofte stillede spørgsmål</h2>
+        <!-- https://www.w3schools.com/howto/howto_js_accordion.asp -->
+        <article id="faqKontakt">
+            <div id="faqKontaktColumn">
+                <div id="faqKasser">
+                    <button class="accordion">Hvad skal jeg selv medbringe?</button>
+                    <div class="panel">
+                      <p>Vi har næsten det hele. Du skal medbringe håndklæde, badetøj til at have på under våddragten, masser af gåpåmod og godt humør. Så står vi for resten!</p>
+                    </div> 
+                </div>
+                <div id="faqKasser">
+                    <button class="accordion">Hvor skal jeg møde op til kurset?</button>
+                    <div class="panel">
+                      <p>Du skal møde op ved udlejningen. Meget gerne 10-15 min før kursets start, således at I er helt klart når vi starter.</p>
+                    </div>
+                </div>
+                <div id="faqKasser">
+                    <button class="accordion">Kan børn selv deltage?</button>
+                    <div class="panel">
+                      <p>Børn fra 3-12 kan også sagtens være med i bølgerne - Der skal blot være en voksen / værge. Denne person får også en våddragt på, og fungere som støtte instruktør til barnet.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="faqKontaktColumn">
+                <div id="faqKasser">
+                    <button class="accordion">Kan jeg bruge mit eget SUP-board til kursus?</button>
+                    <div class="panel">
+                      <p>Man må hellere end gerne medbringe eget board. Hvis det er til surfing, så skal det dog være et foam board (blødt surfboard) af sikkerhedsmæssige årsager, da vi er mange på vandet.</p>
+                    </div> 
+                </div>
+                <div id="faqKasser">
+                    <button class="accordion">Hvilken størrelse våddragt skal jeg have?</button>
+                    <div class="panel">
+                      <p> Inden kursets start får man udleveret våddragter af instruktøren , og vi laver et øjemål efter højde og størrelse. En våddragt skal gerne gå lige til anklerne, og skal helst sidde ret tæt. Det er derfor ikke den mest behagelig beklædning, indtil man kommer i vandet. </p>
+                    </div>
+                </div>
+                <div id="faqKasser">
+                    <button class="accordion">Hvad med omklædning?</button>
+                    <div class="panel">
+                      <p>Vi har omklædningsrum til både mænd/drenge og kvinder/piger. Der er toilet facilitetter samme sted. Der er også mulighed for et bad efter kurset, både udendørs og indendørs.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
     </section>
 
+    <section id="mapbox">>
+            <div id="map"></div>
+    </section>
 
+    <section id="lokationer">
+        <div id="lokationerHeader">
+            <h2>Hvis du er i nærheden</h2>
+        </div>
+        <div id="alleLokationer">
+            <div id="lokationerItem">
+                <div>
+                    <img src="media/havslokken.png" alt="Billede af HAVS Aarhus, ved Bassin 7 Aarhus Ø">
+                    <div id="lokationerTekst">
+                        <div>
+                            <p><b>HAVS LØKKEN</b></p>
+                            <p>Sdr Strandvej 16, Løkken</p>
+                            <a href="tel:4527605098">+45 2760 5098</a>
+                        </div>
+                        <div>
+                            <p>Man-Fre: 10-18</p>
+                            <p>Lørdag: 10-20</p>
+                            <p>Søndag: Lukket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lokationerItem">
+                <div>
+                    <img src="media/havsaarhus.png" alt="Billede af HAVS Aarhus, ved Bassin 7 Aarhus Ø">
+                    <div id="lokationerTekst">
+                        <div>
+                            <p><b>HAVS AARHUS</b></p>
+                            <p>Bassin 7, Aarhus Ø</p>
+                            <a href="tel:4527605098">+45 2760 5098</a>
+                        </div>
+                        <div>
+                            <p>Man-Fre: 10-18</p>
+                            <p>Lørdag: 10-20</p>
+                            <p>Søndag: Lukket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="SocBanner">
+        <h2>
+            Hold dig opdateret om de nyeste events <br>
+            Følg os på sociale medier
+        </h2>
+        
+        <div id="aktiviteterSome">
+            <a href="https://www.facebook.com/husethavs" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+            <a href="#" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></a>
+            <a href="https://www.instagram.com/husethavs/?hl=da" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+        </div>   
+    </section>
 
-
-
+    <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
+    <footer id="footercontent"></footer>
 
     </main>
 
      <!-- IMPORT JS -->
      <script src="js/nav.js"></script>
      <script src="js/footer.js"></script>
-     <script src="js/js.js"></script>
+     <script src="js/kontakt.js"></script>
+     <script src="js/map.js"></script>
      
 </body>        
 </html>

@@ -78,7 +78,6 @@ p{
     text-align: center;
 }
 
-
 #buttonMain{
     font-family: var(--mainfont);
     white-space: nowrap;
@@ -86,14 +85,58 @@ p{
     border-style: none;
     font-weight: 500;
     padding: 15px 40px;
-    font-size: 1em;
+    font-size: 1rem;
     background: var(--blue);
     border-radius: 8px;
     color: var(--white);
     text-align: center;
 }
 
+#buttonBanner{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+}
+
+#buttonOutline{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--black);
+    font-weight: 600;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: none;
+    border-radius: 8px;
+    color: var(--black);
+    text-align: center;
+}
+
 #buttonMain:hover{
+    background: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#buttonBanner:hover{
+    background: var(--white);
+    color: var(--black);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#buttonOutline:hover{
     background: var(--black);
     color: var(--white);
     transition: 0.5s;
@@ -183,7 +226,7 @@ footer{
     font-family: var(--mainfont);
     display: flex;
     justify-content: space-between;
-    padding: 4rem 10rem 5rem 10rem;
+    padding: 8rem 10rem 8rem 10rem;
     line-height: 160%;
 }
 
@@ -198,8 +241,9 @@ footer{
 
 #landing p{
     font-size: 1.3rem;
-    font-family: 'Circular Std Light';
-    font-weight: 7700;
+    font-family: var(--mainfont);
+    line-height: var(--lineheight);
+    font-weight: 300;
     max-width: 44ch;
     padding-bottom: 5rem;
 }
@@ -431,6 +475,69 @@ footer{
     max-width: 100%;
 }
 
+/* TESTIMONAILS */
+#testimonials{
+    background-color: var(--beige);
+    font-family: var(--mainfont);
+    color: var(--black);
+    padding: 10rem 10rem;
+}
+
+#testimonialsHeader h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    padding-bottom: 2.5rem;
+}
+
+#tStars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#fivestars{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#fivestars svg{
+    height: 20px;
+    fill: var(--blue);
+}
+
+#testimonialsBox{
+    display: flex;
+    gap: 5rem;
+}
+
+#testimonialsBox p{
+    line-height: var(--lineheight);
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+#tBoxRightText{
+    padding-bottom: 4rem;
+}
+
+#tBoxRightBottom{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+#tBoxLeft{
+    width: 50%;
+}
+
+#tBoxRight{
+    width: 50%;
+}
+
+
 /* LOKATIONER - HVIS DU ER I NÆRHEDEN */
 #lokationer{
     display: flex;
@@ -485,6 +592,20 @@ footer{
 }
 
 /* NYHEDSBREV */
+#nyhedsbrevBanner{
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 10rem 10rem;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+#f1{
+    display: flex;
+    gap: 10px;
+}
+
 #nyhedsbrevBanner fieldset{
     border-style: none;
     border-color: none;
@@ -492,10 +613,34 @@ footer{
 
 #nyhedsbrevBanner input{
     border-radius: 8px;
+    width: 350px;
+    padding: 10px 40px;
+}
+
+#nbTekst{
+    font-family: var(--mainfont);
+    color: var(--white);
+}
+
+#nbTekst h3{
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+#nbTekst p{
+    font-size: 1.1rem;
+    max-width: 63ch;
+    line-height: var(--lineheight);
+}
+
+#nbTekst span{
+    font-weight: 200;
 }
 
 #f2{
     display: none;
+    color: var(--white);
+    font-family: var(--mainfont);
 }
 
 #btn1{
@@ -514,13 +659,11 @@ footer{
 }
 
 #btn1:hover{
-    background: var(--black);
-    color: var(--white);
+    background: var(--lightgray);
+    color: var(--black);
     transition: 0.5s;
     cursor: pointer;
 }
-
-
 
 /* Header på alle undersider*/
 header{
@@ -528,7 +671,6 @@ header{
 }
 
 /* AKTIVITETER - underside */
-
 #aktivitettop{
     display: flex;
     justify-content: space-between;
@@ -562,7 +704,6 @@ header{
 
 #aktivibillede{
     width: 50%;
-
 }
 
 #aktivibillede img{
@@ -571,7 +712,6 @@ header{
 }
 
 /* Veninde dag */
-
 #veninde-banner{
     display: flex;
     justify-content: center;
@@ -610,7 +750,6 @@ header{
 }
 
 /* Kommende events */
-
 #aktiviKommende{
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -630,7 +769,6 @@ header{
 }
 
 /* Aktiviteter året rundt */
-
 #aktiviRundt{
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -721,10 +859,10 @@ header{
     height: 30px;
     fill: var(--white);
 }
-   
 
-
-
+#aktiviteterSome svg:hover{
+    fill: var(--blue);
+}
 
 /* Om Os - underside */
 
@@ -769,7 +907,6 @@ header{
 }
 
 /* Vesterhavs stemning banner */
-
 #vesterStemning{
     display: flex;
     justify-content: center;
@@ -798,7 +935,7 @@ header{
     font-weight: 500;
     font-size: 2.5rem;
     padding-bottom: 1.5rem;
-    
+    text-underline-offset: 0.8rem;
 }
 
 #vesterTekst p{
@@ -808,7 +945,197 @@ header{
     line-height: var(--lineheight);
 }
 
+/* Frederik afsnit */
+#frederik{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 50%;
+    width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
 
+#frederikBillede{
+    width: 50%;
+}
+
+#frederikBillede img{
+    width: 100%;
+    height: auto;
+}
+
+#frederikTekst{
+    background-color: var(--black);
+    max-width: 50%;
+}
+
+#frederikTekst h3{
+    font-family: var(--mainfont);
+    color: var(--white);
+    font-weight: 300;
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+    max-width: 12ch;
+    text-underline-offset: 0.8rem;
+}
+
+#omosHistorie{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--white);
+    height: 50%;
+    width: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#historieTekst{
+    font-size: 1.3rem;
+    color: var(--gray);
+    max-width: 50%;
+    width: 44ch;
+}
+
+#tekstMemo{
+    font-size: 1.3rem;
+    color: var(--gray);
+    max-width: 50%;
+    width: 44ch;
+
+}
+
+/* 404 SIDE */
+#fejlSide{
+    text-align: center;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 10rem;
+}
+
+#Tekst404{
+    font-family: var(--mainfont);
+    color: var(--black);
+    font-size: 3rem;
+}
+
+/* BOOKING STARTSIDE */
+#bookHvad{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+}
+
+#bookOversigt{
+    width: 50%;
+    padding-left: 10rem;
+    text-align: center;
+}
+
+#bookOversigt h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    font-size: 4rem;
+    padding-bottom: 3.5rem;
+    max-width: 30ch;
+}
+
+#bookingBillede{
+    width: 50%;
+}
+
+#bookingBillede img{
+    width: 100%;
+    height: auto;
+}
+
+#bookingBanner{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    color: var(--black);
+    padding: 10rem 12rem;
+    background-color: var(--black);
+    background-image: url('/media/sand-banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bKnapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#bBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#bBanner span{
+    font-weight: 300;
+}
+
+#bBanner h2{
+    font-family: var(--mainfont);
+    font-size: 3.5rem;
+    width: 20ch;
+    color: var(--white);
+}
+
+/* OVERSIGT OVER UDSTYR - SIDE */
+
+#goBack{
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+#goBack svg{
+    height: 20px;
+}
+
+#goBack a{
+    color: var(--black);
+    text-underline-offset: 0.25rem;
+    font-size: 1.2rem;
+}
+
+#oversigtSamlet{
+    display: flex;
+}
+
+#udstyrTekst{
+    padding-top: 10rem;
+    padding-left: 10rem;
+
+}
+
+#udstyrBillede{
+    width: 50%;
+}
+
+#udstyrBillede img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+    
 
 /* KONTAKT */
 #KontaktHeader{
@@ -928,7 +1255,335 @@ header{
     background-image: url('/media/message.svg');
 } 
 
+/* KONTAKT FAQ */
+#sectionFaq{
+    padding-left: 12rem;
+    background-color: var(--white);
+}
 
+#sectionFaq h2{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3rem;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+ #faqKontakt{
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    padding-right: 12rem;
+} 
+
+#faqKontaktColumn{
+    width: 45%;
+    /*display: flex;
+    flex-direction: column;
+    gap: 1em;*/
+}
+#faqKasser{
+    padding-bottom: 2em;
+}
+
+/* Inspireret fra https://www.w3schools.com/howto/howto_js_accordion.asp */
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px;
+    padding-left: 2em;
+    padding-right: 2em;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .accordion:after {
+    content: url('/media/faq.svg');
+    /*background-color: var(--black);*/
+    float: right;
+    height: 1.54em;
+    width: 1.54em;
+  }
+
+  .active:after {
+    content: url('/media/faq.svg');
+    transform: rotate(180deg);
+    float: right;
+    /*filter: invert(100%);*/
+  }
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 1em 2em;
+    background-color: var(--white);
+    font-size: 1.2rem;
+    display: none;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.panel p{
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--black);
+    width: 50ch;
+    /* font-weight: 600; */
+}
+
+/* MAPBOX */
+#mapbox {
+    padding-top: 5em;
+  }
+  
+#map{
+    width: 100%;
+    height: 644px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Inspiration: https://docs.mapbox.com/mapbox-gl-js/example/set-popup/ */
+#marker{
+    background-image: url('/media/havsMap2.png');
+    background-color: var(---beige);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.mapboxgl-popup{
+    max-width: 200px;    
+}
+
+.mapboxgl-Popup-content {
+    color: #F3F3DD;
+    background-color: #91785D;
+    border-color: #91785D;
+    max-width: 250px;
+    box-shadow: 3px 3px 2px #8B5D33;
+    border-top-color: black !important;
+}
+
+#MapPopup{
+    font-family: var(--mainfont);
+    line-height: var(--lineheight);
+    color: var(--black);
+    font-size: 1.2rem;
+    padding: 0.5em;
+}
+
+/* MENUKORT.HTML + menukort.js */
+#menubeskrivelse{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    max-width: 55ch;
+}
+#havsMenukort{
+    font-family: var(--mainfont);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#menucontainerid{
+    padding-right: 2rem;
+}
+
+#menucontainerid h3{
+    font-size: 4.5rem;
+    font-weight: 300;
+}
+
+#havsMenukort h2{
+    font-family: var(--mainfont);
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+#havsMenukortItem{
+    padding-top: 10rem;
+}
+
+#menucontainerLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menucontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+#menucontainerLeft{
+    display: flex;
+    gap: 2rem;
+}
+
+#hovedretter{
+    padding: 8rem 15rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#desserter{
+    padding: 8rem 15rem;
+    background-color: var(--beige);
+    color: var(--black);
+}
+
+#drikkevarer{
+    padding: 8rem 15rem;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#menucontainertitle h3{
+    font-size: 1.5rem;
+}
+
+#menucontainerright{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#kaffe{
+    padding: 8rem 15rem;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#mkHeader{
+    color: var(--black);
+    font-family: var(--mainfont);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#mkHeader h3{
+    font-size: 3rem;
+    padding-bottom: 2.5rem;
+}
+
+#menukortHeaderTekst{
+    width: 50%;
+}
+
+#menuKortHeaderPic{
+    width: 65%;
+}
+
+#menuKortHeaderPic img{
+    width: 100%;
+    height: auto;
+}
+
+#menukortHeaderTekst h6{
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding-bottom: 1rem;
+
+}
+
+#menukortHeaderTekst p{
+    padding-bottom: 4rem;
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    color: var(--gray);
+    max-width: 50ch;
+}
+
+#menukortButtons{
+    display: flex;
+    gap: 10px;
+}
+
+#menukortPicBanner{
+    display: flex;
+    background-color: var(--blue);
+    width: 100%;
+    height: 50vh;
+}
+
+#mkPicBannerLeft{
+    width: 50%;
+    background-image: url('/media/havskaffe.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mkPicBannerRight{
+    width: 50%;
+    background-image: url('/media/havsfustager.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.glide__slide {
+    border: 1px solid black;
+    line-height: 100px;
+    margin: 0;
+    text-align: center;
+}
+
+#charityBanner{
+    font-family: var(--mainfont);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    color: var(--white);
+    padding: 10rem 12rem;
+    background-color: var(--black);
+    background-image: url('/media/charitybanner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#charityBanner h3{
+    font-size: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+#charityBanner p{
+    font-size: 1.2rem;
+    color: var(--white);
+    line-height: var(--lineheight);
+    max-width: 40ch;
+}
+
+#charityBanner svg{
+    fill: var(--white);
+    width: 500px;
+}
 
 /* NAVBAR */
 .navbar{
@@ -1157,4 +1812,7 @@ nav{
 
 
 }
+
+
+
 

@@ -13,7 +13,8 @@ function toggleNav() {
     }
 }
 
-// NYHEDSBREV FORM
+// NYHEDSBREV FORM + validation
+// Inspireret af https://stackoverflow.com/questions/20588026/validating-email-address-using-jscript-without-a-regular-expression 
 btn1.addEventListener('click', function() {
 
     if (document.getElementById("Email").value == "" 
@@ -30,3 +31,13 @@ btn1.addEventListener('click', function() {
       f1.style.display = 'none'
     }
 })
+
+
+// GLIDE JS, autoplay carousel og 3 billeder i view
+var glideMulti1 = new Glide('.multi1', {
+    type: 'carousel',
+    autoplay: 3500,
+    perView: 3
+}).mount();
+
+// mount glide, så det kører
