@@ -1,4 +1,4 @@
-    // MAIN JS
+// MAIN JS
 //NAVBAR
 function toggleNav() {
     var x = document.getElementById('responsive-nav');
@@ -32,12 +32,3 @@ btn1.addEventListener('click', function() {
     }
 })
 
-
-// GLIDE JS, autoplay carousel og 3 billeder i view
-var glideMulti1 = new Glide('.multi1', {
-    type: 'carousel',
-    autoplay: 3500,
-    perView: 3
-}).mount();
-
-// mount glide, så det kører

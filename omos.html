@@ -10,6 +10,11 @@
     <title>HAVS - Et univers ved vandet</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+     <!-- Import CDN Flickity til carousel slider -->
+     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- API mapbox -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
 </head>
 <body>
     <main>
@@ -20,51 +25,48 @@
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
         <div class="container"></div>
 
-        <section id="hvadErHavs">
+        <header id="hvadErHavs">
             <div id="hvadtekst">
                 <h1>Hvad er HAVS?</h1>
                 <p>
                     Hos os er der plads til alle, om du vil på vandet eller blot forbi til en kop lokalristet kaffe. Vi er et mangfoldigt univers, hvor du finder både surfing, café og en livsstilsbutik. 
 
-                    <br>Vi er en bid af Danmarks vestkyst og er nu landet ved Bassin 7, Aarhus Ø. 
+                    Vi er en bid af Danmarks vestkyst og er nu landet ved Bassin 7, Aarhus Ø. 
                 </p> 
 
-                <a id="buttonMain" href="https://www.facebook.com/husethavs">Læs mere</a>
+                <a id="buttonMain" href="#frederik">Læs mere</a>
 
             </div>
             <div id="hvadhavsBillede">
-                <img src="media/løkken-3.png" alt="Surfer i vesterhavet"> 
+                <img src="media/headerOmOs.png" alt="Billede af HAVS Café om sommeren, med masser af mennesker udenfor, der hygger sig. Billede lånt af HAVS med tilladelse."> 
             </div>
-        </section>
-
-        <section id="vesterStemning">
-            <div id="vesterBillede">
-            </div>
-            <div id="vesterTekst">
-                <h3>Vi lever for bæredygtighed,<br>
-                    et <i> unikt fællesskab, </i> <br>
-                    og den gode <br>
-                    <u>Vesterhavsstemning</u>.</h3>
-                <p>
-                    Vores råvarer er lokale. Fiskene kommer fra fiskere i nærområdet, kødet og grønt fra gårdene omkring os. 
-                    Dette gør vi i overensstemmelse med vores værdier om en grønnere verden, og en større respekt for naturen omkring os.
-                </p>
-            </div>  
-        </section>
+        </header>
 
         <section id="frederik">
             <div id="frederikTekst">
                 <h3>Vi er et <b> univers</b>, hvor der er <b>plads til <u>alle.</u></b></h3>
             </div> 
             <div id="frederikBillede">
-                <img src="media/omhavsfrederik.png" alt=""> 
+                <img src="media/omhavsfrederik5.png" alt=""> 
             </div>  
         </section>
+
+        <!-- FLICKITY.JS CAROUSEL -->
+        <div class="carousel" data-flickity='{ "autoPlay": 1750, "freeScroll": true, "wrapAround": true, "pageDots": false, "prevNextButtons": false, "pauseAutoPlayOnHover": false}'>
+            <img class="carousel-image" src="media/havs-slider1.png" alt="">
+            <img class="carousel-image" src="media/havs-slider2.png" alt="">
+            <img class="carousel-image" src="media/havs-slider3.png" alt="">
+            <img class="carousel-image" src="media/havs-slider4.png" alt="">
+            <img class="carousel-image" src="media/havs-slider5.png" alt="">
+            <img class="carousel-image" src="media/havs-slider6.png" alt="">
+        </div>
 
         <section id="omosHistorie">
             <div id="historieTekst">
                 <p>
-                    HAVS blev opstartet i Løkken i 2015, og er nu landet ved Aarhus Ø, Bassin 7. <br> <br>
+                    HAVS blev opstartet i Løkken i 2015, og er nu landet ved Aarhus Ø, Bassin 7. 
+                    <br><br>
+                    Navnet HAVS stammer fra alt den tid, som vi bruger lige ved havet. Vi elsker at være tæt på den barske og rå natur. Det stammer også fra vores tætte samarbejde med fiskerne, der leverer friskfanget lokal fisk til vores café.
 
                     Vi har surf, SUP-boarding, udlejning, café og livsstilsbutik - der er lidt til alle. <br> <br>
 
@@ -87,29 +89,39 @@
             </div>
         </section>
 
+        <section id="vesterStemning">
+            <div id="vesterBillede">
+            </div>
+            <div id="vesterTekst">
+                <h3>Vi lever for bæredygtighed,<br>
+                    et <i> unikt fællesskab, </i> <br>
+                    og den gode <br>
+                    <u>Vesterhavsstemning</u>.</h3>
+                <p>
+                    Vores råvarer er lokale. Fiskene kommer fra fiskere i nærområdet, kødet og grønt fra gårdene omkring os. 
+                    Dette gør vi i overensstemmelse med vores værdier om en grønnere verden, og en større respekt for naturen omkring os.
+                </p>
+            </div>  
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
+        <!-- DATA INDSÆTTES FRA MAP.JS -->
+        <section id="mapbox">>
+            <div id="map"></div>
+         </section>
 
        <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
        <footer id="footercontent"></footer>
-
 
     </main>
     
     <!-- IMPORT JS -->
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/map.js"></script>
     <script src="js/js.js"></script>
+    
+    <!-- Import CDN Flickity til carousel slider-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    
     
 </body>
 </html>

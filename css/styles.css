@@ -13,10 +13,11 @@ html{
     scroll-behavior: smooth;
 }
 
-/* FONTS */
+/* IMPORT FONTS */
 @import "fonts.css";
 
-/* VARIABLER*/
+
+/* VARIABLER */
 :root {
     color: var(--black);
     /* Farver */
@@ -30,14 +31,14 @@ html{
     --lightgray: #F7F7F7;
     --white: #FDFDFD;
 
-    /*UX writing*/
+    /*UX writing - Error + Success*/
     --false: #FC5252;
     --success: #0FEC42;
 
     /* Typografi */
     --mainfont: 'Circular Std Book', sans-serif;
     --headers: 'Circular Std Book', sans-serif;
-    --scndfont: 'Saol Display Regular', serif;
+    --scndfont: 'Saol Display Light', serif;
     --lineheight: 160%;
 
     /* Whitespace */
@@ -50,16 +51,10 @@ body {
     background-color: var(--white);
 }
   
-/* Typography 
-h1 {
-
-}
-*/
 p{
     font-family: var(--mainfont);
     font-weight: normal;
 }
-
 
 /* BUTTONS */
 #buttonFooter{
@@ -90,6 +85,9 @@ p{
     border-radius: 8px;
     color: var(--white);
     text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
 }
 
 #buttonBanner{
@@ -108,6 +106,7 @@ p{
 
 #buttonOutline{
     font-family: var(--mainfont);
+    font-weight: 300;
     white-space: nowrap;
     text-decoration: none;
     border-style: solid;
@@ -122,11 +121,45 @@ p{
     text-align: center;
 }
 
+#buttonOutlineHvid{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--white);
+    font-weight: 600;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: none;
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+}
+
+#buttonSubmitKontakt{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
 #buttonMain:hover{
     background: var(--black);
     color: var(--white);
     transition: 0.5s;
     cursor: pointer;
+    border-color: var(--black);
 }
 
 #buttonBanner:hover{
@@ -141,6 +174,21 @@ p{
     color: var(--white);
     transition: 0.5s;
     cursor: pointer;
+}
+
+#buttonOutlineHvid:hover{
+    background: var(--white);
+    color: var(--black);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#buttonSubmitKontakt:hover{
+    background: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+    border-color: var(--black);
 }
 
 /* FOOTER */
@@ -418,15 +466,30 @@ footer{
 
 /* MISSION BANNER LANDINGPAGE */
 #missionBanner{
-    padding-top: 9rem;
-    padding-bottom: 9rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     padding-left: 10rem;
     padding-right: 10rem;
     background-color: var(--black);
     color: var(--beige);
-    font-family: var(--scndfont);
-    font-size: 5rem;
-    font-weight: 500;
+}
+
+#missionBanner u{
+    text-underline-offset: 1rem;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+#missionBanner p{
+    font-size: 10rem;
+    font-family: 'kepler-std-semicondensed-dis', serif; 
+    font-weight: 100;
+}
+
+#italicFont{
+    font-family: 'kepler-std-semicondensed-dis', serif; 
+    font-style: italic;
+    font-weight: 100;
 }
 
 /* MENUKORT BANNER */
@@ -486,8 +549,8 @@ footer{
 #testimonialsHeader h2{
     text-align: center;
     font-size: 3rem;
-    font-weight: 200;
-    padding-bottom: 2.5rem;
+    font-weight: 600;
+    padding-bottom: 5rem;
 }
 
 #tStars{
@@ -499,6 +562,8 @@ footer{
 
 #fivestars{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 5px;
 }
@@ -520,7 +585,7 @@ footer{
 }
 
 #tBoxRightText{
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 }
 
 #tBoxRightBottom{
@@ -815,7 +880,7 @@ header{
 }
 
 #aktivitetstekst h4{
-    font-family: 'Circular Std Medium', sans-serif;
+    font-family: var(--mainfont);
     font-weight: 500;
     font-size: 2.5rem;
     padding-bottom: 1.5rem;
@@ -829,8 +894,15 @@ header{
 }
 
 #aktivitetstekst a{
+    text-underline-offset: 0.3rem;
+    font-family: var(--mainfont);
     color: var(---black);
     font-size: 1.1rem;
+}
+
+#aktivitetstekst a:hover{
+    opacity: 0.4;
+    transition: 0.5s;
 }
 
 #SocBanner{
@@ -862,30 +934,32 @@ header{
 
 #aktiviteterSome svg:hover{
     fill: var(--blue);
+    transition: .5s;
 }
 
 /* Om Os - underside */
 
 #hvadErHavs{
     display: flex;
+    gap: 5rem;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
+    padding-left: 10rem;
+    padding-right: 10rem; 
 }
 
 #hvadtekst{
-    padding-left: 12rem;
-    padding-bottom: 2.5rem;
+    max-width: 50%;
 }
 
 #hvadErHavs h1{
-    font-family: var(--mainfont);
-    font-weight: 400;
+    font-family: var(--headers);
+    font-weight: 600;
     line-height: 140%;
-    font-size: 3.5rem;
+    font-size: 4rem;
     padding-bottom: 2rem;
-    max-width: 17ch;
 }
 
 #hvadErHavs p{
@@ -893,8 +967,8 @@ header{
     line-height: var(--lineheight);
     font-family: var(--mainfont);
     color: var(--gray);
-    max-width: 44ch;
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
+    max-width: 45ch;
 }
 
 #hvadhavsBillede{
@@ -903,7 +977,7 @@ header{
 
 #hvadhavsBillede img{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 /* Vesterhavs stemning banner */
@@ -917,7 +991,7 @@ header{
 }
 
 #vesterBillede{
-    background-image: url('/media/voresaktiviteter.png');
+    background-image: url('/media/OmosStemning.png');
     background-position: center;
     width: 50%;
     height: 100%;
@@ -954,9 +1028,6 @@ header{
     height: 50%;
     width: 100%;
     padding-left: 10rem;
-    padding-right: 10rem;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
 }
 
 #frederikBillede{
@@ -964,8 +1035,8 @@ header{
 }
 
 #frederikBillede img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 #frederikTekst{
@@ -1032,25 +1103,38 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
 #bookOversigt{
-    width: 50%;
-    padding-left: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    width: 50%;
+}
+
+#bookingBillede{
+    width: 50%;
+}
+
+#bookKnapperne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
 }
 
 #bookOversigt h1{
     font-family: var(--mainfont);
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding-bottom: 3.5rem;
     max-width: 30ch;
-}
-
-#bookingBillede{
-    width: 50%;
 }
 
 #bookingBillede img{
@@ -1063,9 +1147,8 @@ header{
     justify-content: space-between;
     gap: 10rem;
     color: var(--black);
-    padding: 10rem 12rem;
+    padding: 10rem 10rem;
     background-color: var(--black);
-    background-image: url('/media/sand-banner.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1096,41 +1179,257 @@ header{
 }
 
 /* OVERSIGT OVER UDSTYR - SIDE */
-
 #goBack{
-    padding-left: 5rem;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    padding-left: 10rem;
+    padding-top: 2rem;
 }
 
 #goBack svg{
     height: 20px;
+    margin-right: 0.5rem;
 }
 
 #goBack a{
+    font-family: var(--mainfont);
     color: var(--black);
     text-underline-offset: 0.25rem;
     font-size: 1.2rem;
 }
 
-#oversigtSamlet{
+#bookingHeaderSection{
     display: flex;
-}
-
-#udstyrTekst{
-    padding-top: 10rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
     padding-left: 10rem;
-
+    padding-right: 10rem;
+    gap: 5rem;
 }
 
-#udstyrBillede{
+#bookingHeaderTekst h2{
+    font-family: var(--headers);
+    font-weight: 600;
+    line-height: 140%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+#bookingHeaderTekst p{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--gray);
+    max-width: 44ch;
+    padding-bottom: 4rem;
+}
+
+#bookingButtons{
+    display: flex;
+    gap: 10px;
+}
+
+#bookingHeaderBillede{
     width: 50%;
 }
 
-#udstyrBillede img{
+#bookingHeaderBillede img{
     width: 100%;
     height: auto;
 }
+
+#voresUdstyr{
+    padding: 3rem 10rem 10rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#uCards{
+    display: flex;
+    justify-content: space-between;
+}
+
+#voresUdstyr h3{
+    font-family: var(--mainfont);
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 5rem;
+}
+
+#udstyrCard{
+    font-size: 1.1rem;
+    font-family: var(--mainfont);
+    width: 23%;
+    background-color: var(--beige);
+}
+
+#udstyrCard2{
+    font-size: 1.1rem;
+    font-family: var(--mainfont);
+    width: 23%;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#udstyrCardPic{
+    width: 100%;
+    height: auto;
+}
+
+#udstyrCardPic img{
+    height: 100%;
+    width: 100%;
+}
+
+#udstyrCardDescription{
+    padding: 2rem;
+}
+
+#udstyrCardDescription h4{
+    padding-bottom: 1rem;
+    font-family: var(--headers);
+}
+
+#ucardTop p{
+    padding-bottom: 2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+}
+
+#ucardBottom{
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#udstyrsBanner{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+    color: var(--black);
+    padding: 10rem 12rem;
+    background-color: var(--blue);
+}
+
+#udsBanner h2{
+    font-family: var(--mainfont);
+    font-size: 3.5rem;
+    color: var(--white);
+}
+
+#udstyrKnapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#udsBanner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#udsBanner span{
+    font-weight: 300;
+}
+
+/* HVILKET TYPE KURSUS -  SIDE */
+#voresKursus h3{
+    font-family: var(--mainfont);
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+#voresKursus{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#KCards{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+}
+
+#kursusCard{
+    font-size: 1.1rem;
+    font-family: var(--mainfont);
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#kursusCardPic{
+    width: 60%;
+    height: auto;
+}
+
+#kursusCardPic img{
+    width: 100%;
+    height: 100%;
+}
+
+#kursusCardDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    padding: 3rem;
+    min-height: 100%;
+    background-color: var(--black);
+}
+
+#kursusCardDescription h4{
+    font-family: var(--headers);
+    color: var(--white);
+}
+
+#KcardTop h4{
+    font-size: 1.7rem;
+    padding-bottom: 2.5rem;
+}
+
+#KcardTop p{
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: #A1A1A1;
+}
+
+#KcardBottom{
+    padding-top: 3rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#KcardBottom p{
+    color: var(--white);
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+}
+
+#kursusKnapper{
+    display: flex;
+    gap: 10px;
+    padding-top: 1rem;
+}
+
+/* BOOKNING AF INTRO */
 
 
 
@@ -1177,9 +1476,21 @@ header{
     padding-bottom: 3em;
 }
 
-#kontaktIkoner p{
+#kontaktIkoner a{
     color: var(--gray);
     font-weight: bold;
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    text-decoration: none;
+    max-width: 43ch;
+    padding-bottom: 3rem;
+}
+
+#kontaktIkoner a:hover{
+    color: var(--blue);
+    /*text-decoration: underline;*/
+    transition: .5s;
 }
 
 #kontaktIkon svg{
@@ -1193,8 +1504,13 @@ header{
 }
 
 #kontaktSome svg{
-    height: 1.7em;
+    height: 1.4em;
     fill: var(--blue);
+}
+
+#kontaktSome svg:hover{
+    fill: var(--gray);
+    transition: .5s;
 }
 
 #kontaktSome{
@@ -1222,15 +1538,13 @@ header{
 
 #kontaktFormHeader input, textarea{
     width: 100%;
-}
-
-#kontaktFormHeader input, textarea{
+    color: var(--gray);
     margin-bottom: 0.5em;
     margin-top: 0.5em;
 }
 
 /* Ikoner i placeholder*/ /* https://www.w3schools.com/howto/howto_css_animated_search.asp */
-#navn, #mail, #besked {
+#navn, #mail, #besked{
     box-sizing: border-box;
     border: 2px solid var(--lightgray);
     border-radius: 8px;
@@ -1240,7 +1554,7 @@ header{
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     background-size: 1.1em;
-  } 
+} 
 
 #navn {
     background-image: url('/media/person.svg');
@@ -1255,9 +1569,348 @@ header{
     background-image: url('/media/message.svg');
 } 
 
+/* HAVS SHOP - SIDE */
+
+
+.shopHeaderSection{
+    padding-top: 10rem;
+}
+
+.shopHeaderTekst{
+    width: 50%;
+    max-width: 65ch;
+}
+
+#shop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#shopProduktLinkBillede img:hover{
+    opacity: 0.4;
+    transition: 1s;
+}
+
+#shopUnderTekst a:hover{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+#shopHeader{
+    font-family: 'Circular Std Book', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+#shopHeader h3{
+    font-size: 3rem;
+    font-weight: var(--headers);
+}
+
+#shopGrid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#shopProdukt img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+}
+
+#shopProdukt{
+    font-family: 'Circular Std Book', sans-serif;
+    max-width: 30%;
+}
+
+#shopUnderTekst{
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#shopUnderTekst a{
+    font-family: var(--mainfont);
+    color: var(--black);
+    text-underline-offset: 0.25rem;
+    font-size: 1.1rem;
+}
+
+#shopProdukt p{
+    font-size: 1.1rem;
+    padding-bottom: 0.6rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Nyeste varer - shop */
+
+#varerUnderTekst{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+#shopNyesteGrid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#shopNyesteProdukt img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+}
+
+#shopNyesteProdukt{
+    font-family: 'Circular Std Book', sans-serif;
+    max-width: 20%;
+}
+
+
+#varerUnderTekst a{
+    font-family: var(--mainfont);
+    color: var(--black);
+    text-underline-offset: 0.25rem;
+    font-size: 1.2rem;
+}
+
+#shopNyesteProdukt p{
+    font-size: 1.1rem;
+    padding-bottom: 0.6rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#shopUnderBanner{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+#shopUnderBannerBillede{
+    width: 50%;
+}
+
+#shopUnderBannerBillede img{
+    width: 100%;
+    height: auto;
+}
+
+#shopUnderBannertekst{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 12rem;
+    padding-right: 12rem;
+}
+
+#shopUnderBannertekst h4{
+    font-family: var(--mainfont);
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+
+
+#nyhedsbrevShopBanner{
+    background-color: var(--beige);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 10rem 10rem;
+    gap: 5rem;
+    justify-content: space-between;
+}
+
+#f1{
+    display: flex;
+    gap: 10px;
+}
+
+#nyhedsbrevShopBanner fieldset{
+    border-style: none;
+    border-color: none;
+}
+
+#nyhedsbrevShopBanner input{
+    border-radius: 8px;
+    width: 350px;
+    padding: 10px 40px;
+}
+
+#f1{
+    display: flex;
+    gap: 10px;
+}
+
+#nbShopTekst{
+    font-family: var(--mainfont);
+    color: var(--black);
+}
+
+#nbShopTekst h3{
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+}
+
+#nbShopTekst span{
+    font-weight: 200;
+}
+
+/* SHOP PRODUKT SIDE */
+#shopProduktHeaderSection{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 3rem;
+    gap: 5rem;
+}
+
+#shopProduktHeaderTekst{
+    width: 40%;
+}
+
+#produktBeskrivelse{
+    padding-bottom: 3rem;
+}
+
+#shopProduktHeaderTekst h5{
+    font-family: var(--headers);
+    font-weight: 600;
+    color: var(--gray);
+}
+
+#shopProduktHeaderTekst h2{
+    font-family: var(--headers);
+    font-weight: 600;
+    line-height: var(--lineheight);
+    font-size: 3.5rem;
+}
+
+#shopProduktHeaderTekst h4{
+    font-family: var(--headers);
+    font-weight: 200;
+    line-height: var(--lineheight);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+#shopProduktHeaderTekst p{
+    font-size: 1.2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--gray);
+    padding-bottom: 1.5rem;
+}
+
+#shopProduktButtons{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 4rem;
+}
+
+#shopBillede{
+    width: 50%;
+    height: auto;
+}
+
+#shopBillede img{
+    height: auto;
+    width: 100%;
+}
+
+#blivInspireret{
+    padding-left: 10rem;
+    padding-top: 10rem;
+}
+
+#inspoSkrift h2{
+    font-family: var(--mainfont);
+    font-weight: 200;
+    line-height: 140%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    
+}
+
+#hashtaghavs{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#hashtaghavs h3{
+    font-family: var(--headers);
+    font-weight: 200;
+    line-height: var(--lineheight);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+#inspoFotoGalleri{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#inspoNyesteGrid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+#inspoNyesteProdukt img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+}
+
+#inspoNyesteProdukt{
+    max-width: 23%;
+}
+
 /* KONTAKT FAQ */
 #sectionFaq{
-    padding-left: 12rem;
+    padding-left: 10rem;
     background-color: var(--white);
 }
 
@@ -1274,7 +1927,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 10em;
-    padding-right: 12rem;
+    padding-right: 10rem;
 } 
 
 #faqKontaktColumn{
@@ -1346,11 +1999,7 @@ header{
     /* font-weight: 600; */
 }
 
-/* MAPBOX */
-#mapbox {
-    padding-top: 5em;
-  }
-  
+/* MAPBOX */  
 #map{
     width: 100%;
     height: 644px;
@@ -1391,11 +2040,17 @@ header{
 }
 
 /* MENUKORT.HTML + menukort.js */
+.carousel{
+    height: 100%;
+    width: 100%;
+}
+
 #menubeskrivelse{
     font-size: 1.2rem;
     line-height: var(--lineheight);
     max-width: 55ch;
 }
+
 #havsMenukort{
     font-family: var(--mainfont);
     display: flex;
@@ -1483,6 +2138,7 @@ header{
     gap: 5rem;
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 5rem;
 }
 
 #mkHeader h3{
