@@ -1,122 +1,234 @@
 // JS til aktiviteter.html kommende events
 // Sorteringsliste af JSON objekter, 
-// så events kan vises via. tryk på 'filter', en knap.
+// Så events kan vises via. tryk på 'filter', en knap.
 
-// Alle events, JSON, indsat her for at vise eksemplet
-// kan også fetches ind istedet fra events.JSON i /json mappen.
-events = `{
-    "events": [
-        {
-          "id": 1,
-          "titel": "Fish N Chips",
-          "beskrivelse": "Lokalfanget torsk, beerbatter lavet på HAVS Porter, og hjemmelavet fritter. Serveret med hjemmerørt tartar sauce.",
-          "pris": 120,
-          "type": "kultur",
-          "foto": "fishnchips.png"
-        },
-        {
-          "id": 2,
-          "titel": "Surf N Turf Burger",
-          "beskrivelse": "Lokalfanget torsk, beerbatter lavet af HAVS Porter, og hjemmelavet fritter. Hjemmebagt smørbrioche m. tartarmayo.",
-          "pris": 100,
-          "ret": "hovedret",
-          "foto": "surfnturf.png"
-        },
-        {
-          "id": 3,
-          "titel": "Wavey Burger",
-          "beskrivelse": "Double bøf fra med Himmerlands Kvæg, bacon og ost cheddar fra Thise Mejeri. Serveres med hjemmelavede pickles, fritter og mayo.",
-          "pris": 100,
-          "ret": "hovedret",
-          "foto": "wavey.png"
-        },
-        {
-          "id": 1,
-          "titel": "Dagens Kage",
-          "beskrivelse": "Dagens kage fra HAVS. Udvalget varierer efter sæsonen, så spørg tjeneren efter dagens udvalg. Altid lavet fra lokale råvarer.",
-          "pris": 40,
-          "ret": "dessert",
-          "foto": "dagenskage.png"
-        },
-        {
-          "id": 2,
-          "titel": "Hjemmebagt Cookie",
-          "beskrivelse": "Hjemmebagt cookie med dansk smør. Fåes i flere varianter: havtorn/appelsin, saltkaramel og mørk chokolade.",
-          "pris": 30,
-          "ret": "dessert",
-          "foto": "cookie.png"
-        },
-        {
-          "id": 3,
-          "titel": "Hjemmebagt Crossaint",
-          "beskrivelse": "Hjemmebagt crossaint med dansk smør. Fåes med eller uden chokoladefyld.",
-          "pris": 30,
-          "ret": "dessert",
-          "foto": "crossaint.png"
-        },
-        {
-          "id": 1,
-          "titel": "HAVS I.P.A",
-          "beskrivelse": "Vores egen I.P.A (Indian Pale Ale). 0.5L fadøl.Lavet i samarbejde med Løkken Bryghus. Dejlig frisk smag, perfekt til en varm sommerdag.",
-          "pris": 50,
-          "ret": "drikkevare",
-          "foto": "havsipa.png"
-        },
-        {
-          "id": 2,
-          "titel": "MIKKELLER Fadøl",
-          "beskrivelse": "Vi har flere øl fra Mikkeller på fad (0.5L). B.l.a Ich Bin Ein Raspberry Berliner, Burst IPA, Vision Lager. Spørg efter udvalget på dagen.",
-          "pris": 50,
-          "ret": "drikkevare",
-          "foto": "mikkeller.png"
-        },
-        {
-          "id": 3,
-          "titel": "Sodavand",
-          "beskrivelse": "Frit valg. Vælg mellem Hancock Sportscola eller hindbærbrus fra Ebeltoft Gårdbryggeri.",
-          "pris": 30,
-          "ret": "drikkevare",
-          "foto": "sodavand.png"
-        },
-        {
-          "id": 4,
-          "titel": "Husets Vin",
-          "beskrivelse": "Huset HAVS egen vin. Produceret i samarbejde med danske vinbønder. Vælg ml. rød og hvid. Kan købes for 350 DKK flasken.",
-          "pris": 60,
-          "ret": "drikkevare",
-          "foto": "husetsvin.png"
-        },
-        {
-          "id": 1,
-          "titel": "Americano",
-          "beskrivelse": "Klassisk americano. Lavet på vores egen lokalristet kaffe af kvalitetsbønner.",
-          "pris": 40,
-          "ret": "kaffe",
-          "foto": "americano.png"
-        },
-        {
-          "id": 2,
-          "titel": "Espresso",
-          "beskrivelse": "HAVS espressoshots, vælg ml. 1 eller 2 shots. Lavet på vores egen lokalristet kaffe af kvalitetsbønner.",
-          "pris": 30,
-          "ret": "kaffe",
-          "foto": "espresso.png"
-        },
-        {
-          "id": 3,
-          "titel": "Cortado",
-          "beskrivelse": "Cortado lavet med økologisk mælk. Lavet på vores egen lokalristet kaffe af kvalitetsbønner.",
-          "pris": 30,
-          "ret": "kaffe",
-          "foto": "cortado.png"
-        },
-        {
-          "id": 4,
-          "titel": "Cappuccino",
-          "beskrivelse": "Cappuccino lavet med økologisk mælk. Lavet på vores egen lokalristet kaffe af kvalitetsbønner.",
-          "pris": 35,
-          "ret": "kaffe",
-          "foto": "cappuccino.png"
-        }
-      ]
-}`;
+//Load 'alle events' som default, når DOM loades
+window.addEventListener('DOMContentLoaded', (event) => {
+  // Highlight knap, der er selected gennem classList.add
+  // Ny styling - blå knap, UX
+  // JSON loades under fetch
+  alleEvents.classList.add("eventBtnActive");
+
+});
+
+// Kilde: https://www.taniarascia.com/how-to-use-json-data-with-php-or-javascript/ 
+// Load JSON menukort fra /json mappen
+fetch('json/events.json')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+
+    // Lav json data til variabel havsEvents
+    let havsEvents = data
+
+    // Tjek at data loades korrekt
+    console.log( havsEvents.events[1].titel )
+
+    // Forloop og load hele array som default, alle events loades
+    for (let i=0; i<havsEvents.events.length; i++){
+      eventsSelected.innerHTML += `
+        <div class="eventContainer">
+          <div class="eventImage">
+            <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
+          </div>
+          <div class="eventTextField">
+            <div class="eventNumber">
+              <h2> ${havsEvents.events[i].dag} </h2>
+              <h3> ${havsEvents.events[i].måned} </h3>
+            </div>
+            <div class="eventDescription">
+              <h2> ${havsEvents.events[i].titel} </h2>
+              <p>${havsEvents.events[i].beskrivelse}</p>
+            </div>
+          </div>
+          <div class="eventCTA">
+            <button class="eventBtn">Deltag</button>
+          </div>
+        </div>
+      `
+    }
+
+    //eventListener - til klik på menu underpunkter -> forloop gennem menuen 
+    // -> hvis event type = underpunkt, så indsættes html i events
+    kulturEvents.addEventListener('click', function(){
+
+      // loop igennem menupunkter, har de tilføjet highlight class, så fjernes den
+      for (let i=0; i<kommendeeventsSortingButtons.children.length; i++){
+        let child = kommendeeventsSortingButtons.children[i];
+        if (child.classList.contains("eventBtnActive")) {
+          child.classList.remove("eventBtnActive")
+        } 
+      }
+
+      // tilføj highlight til nuværende menupunkt
+      kulturEvents.classList.add("eventBtnActive")
+      
+      //reset indsatte events fra JSON
+      eventsSelected.innerHTML = ""
+
+      //forloop og indsæt kultur events
+      for (let i=0; i<havsEvents.events.length; i++){
+          if ( havsEvents.events[i].type == 'kultur' )  {
+            eventsSelected.innerHTML += `
+              <div class="eventContainer">
+                <div class="eventImage">
+                  <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
+                </div>
+                <div class="eventTextField">
+                  <div class="eventNumber">
+                    <h2> ${havsEvents.events[i].dag} </h2>
+                    <h3> ${havsEvents.events[i].måned} </h3>
+                  </div>
+                  <div class="eventDescription">
+                    <h2> ${havsEvents.events[i].titel} </h2>
+                    <p>${havsEvents.events[i].beskrivelse}</p>
+                  </div>
+                </div>
+                <div class="eventCTA">
+                  <button class="eventBtn">Deltag</button>
+                </div>
+              </div>
+            `
+          } 
+      }
+    })
+
+    //eventListener - til klik på menu underpunkter -> forloop gennem menuen 
+    // -> hvis event type = underpunkt, så indsættes html i events
+    alleEvents.addEventListener('click', function(){
+
+      // loop igennem menupunkter, har de tilføjet highlight class, så fjernes den
+      for (let i=0; i<kommendeeventsSortingButtons.children.length; i++){
+        let child = kommendeeventsSortingButtons.children[i];
+        if (child.classList.contains("eventBtnActive")) {
+          child.classList.remove("eventBtnActive")
+        } 
+      }
+
+      // tilføj highlight til nuværende menupunkt
+      alleEvents.classList.add("eventBtnActive")
+      
+      //reset indsatte events fra JSON
+      eventsSelected.innerHTML = ""
+
+      //forloop og indsæt alle events
+      for (let i=0; i<havsEvents.events.length; i++){
+        eventsSelected.innerHTML += `
+          <div class="eventContainer">
+            <div class="eventImage">
+              <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
+            </div>
+            <div class="eventTextField">
+              <div class="eventNumber">
+                <h2> ${havsEvents.events[i].dag} </h2>
+                <h3> ${havsEvents.events[i].måned} </h3>
+              </div>
+              <div class="eventDescription">
+                <h2> ${havsEvents.events[i].titel} </h2>
+                <p>${havsEvents.events[i].beskrivelse}</p>
+              </div>
+            </div>
+            <div class="eventCTA">
+              <button class="eventBtn">Deltag</button>
+            </div>
+          </div>
+        `
+      }
+    })
+
+    //eventListener - til klik på menu underpunkter -> forloop gennem menuen 
+    // -> hvis event type = underpunkt, så indsættes html i events
+    madEvents.addEventListener('click', function(){
+
+      // loop igennem menupunkter, har de tilføjet highlight class, så fjernes den
+      for (let i=0; i<kommendeeventsSortingButtons.children.length; i++){
+        let child = kommendeeventsSortingButtons.children[i];
+        if (child.classList.contains("eventBtnActive")) {
+          child.classList.remove("eventBtnActive")
+        } 
+      }
+
+      // tilføj highlight til nuværende menupunkt
+      madEvents.classList.add("eventBtnActive")
+      
+      //reset indsatte events fra JSON
+      eventsSelected.innerHTML = ""
+
+      //forloop og indsæt madEvents events
+      for (let i=0; i<havsEvents.events.length; i++){
+          if ( havsEvents.events[i].type == 'mad' )  {
+            eventsSelected.innerHTML += `
+              <div class="eventContainer">
+                <div class="eventImage">
+                  <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
+                </div>
+                <div class="eventTextField">
+                  <div class="eventNumber">
+                    <h2> ${havsEvents.events[i].dag} </h2>
+                    <h3> ${havsEvents.events[i].måned} </h3>
+                  </div>
+                  <div class="eventDescription">
+                    <h2> ${havsEvents.events[i].titel} </h2>
+                    <p>${havsEvents.events[i].beskrivelse}</p>
+                  </div>
+                </div>
+                <div class="eventCTA">
+                  <button class="eventBtn">Deltag</button>
+                </div>
+              </div>
+            `
+          } 
+      }
+    })
+
+    //eventListener - til klik på menu underpunkter -> forloop gennem menuen 
+    // -> hvis event type = underpunkt, så indsættes html i events
+    vandsportEvents.addEventListener('click', function(){
+
+      // loop igennem menupunkter, har de tilføjet highlight class, så fjernes den
+      for (let i=0; i<kommendeeventsSortingButtons.children.length; i++){
+        let child = kommendeeventsSortingButtons.children[i];
+        if (child.classList.contains("eventBtnActive")) {
+          child.classList.remove("eventBtnActive")
+        } 
+      }
+
+      // tilføj highlight til nuværende menupunkt
+      vandsportEvents.classList.add("eventBtnActive")
+      
+      //reset indsatte events fra JSON
+      eventsSelected.innerHTML = ""
+
+      //forloop og indsæt madEvents events
+      for (let i=0; i<havsEvents.events.length; i++){
+          if ( havsEvents.events[i].type == 'vandsport' )  {
+            eventsSelected.innerHTML += `
+              <div class="eventContainer">
+                <div class="eventImage">
+                  <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
+                </div>
+                <div class="eventTextField">
+                  <div class="eventNumber">
+                    <h2> ${havsEvents.events[i].dag} </h2>
+                    <h3> ${havsEvents.events[i].måned} </h3>
+                  </div>
+                  <div class="eventDescription">
+                    <h2> ${havsEvents.events[i].titel} </h2>
+                    <p>${havsEvents.events[i].beskrivelse}</p>
+                  </div>
+                </div>
+                <div class="eventCTA">
+                  <button class="eventBtn">Deltag</button>
+                </div>
+              </div>
+            `
+          } 
+      }
+    })
+
+  })
+  .catch((err) => {
+    // Catch errors, skriver fejl i console
+    console.log('Tjek events.js, der er sket i fejl i loading af JSON')
+})

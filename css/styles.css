@@ -90,6 +90,75 @@ p{
     border-color: var(--blue);
 }
 
+#alleEvents.eventBtnActive, #kulturEvents.eventBtnActive, #madEvents.eventBtnActive, #vandsportEvents.eventBtnActive{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
+
+.eventBtn{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
+.eventBtnActive{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
+#kommendeeventsSortingButtons button{
+    font-family: var(--mainfont);
+    font-weight: 300;
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--black);
+    font-weight: 600;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: none;
+    border-radius: 8px;
+    color: var(--black);
+    text-align: center;
+}
+
 #buttonBanner{
     font-family: var(--mainfont);
     white-space: nowrap;
@@ -176,6 +245,12 @@ p{
     cursor: pointer;
 }
 
+#kommendeeventsSortingButtons button:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 #buttonOutlineHvid:hover{
     background: var(--white);
     color: var(--black);
@@ -184,6 +259,14 @@ p{
 }
 
 #buttonSubmitKontakt:hover{
+    background: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+    border-color: var(--black);
+}
+
+.eventBtn:hover{
     background: var(--black);
     color: var(--white);
     transition: 0.5s;
@@ -430,6 +513,11 @@ footer{
 #shopTeaserHeader a{
     color: var(--black);
     text-underline-offset: 0.25rem;
+}
+
+#shopTeaserHeader a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
 }
 
 #shopTeaserGrid{
@@ -816,8 +904,16 @@ header{
 
 /* Kommende events */
 #aktiviKommende{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding: 10rem 15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#kommendeeventsSortingButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 #EventsTekst{
@@ -825,13 +921,89 @@ header{
     padding-bottom: 10rem;
 }
 
+#kommendeEvents h1{
+    font-family: var(--mainfont);
+    font-weight: 400;
+    line-height: 140%;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
 #EventsTekst h1{
     font-family: var(--mainfont);
     font-weight: 400;
     line-height: 140%;
     font-size: 3rem;
-
 }
+
+/* Kommende events JSON events.js */
+#eventsSelected{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-family: var(--mainfont);
+    padding-top: 8rem;
+    height: 100%;
+}
+
+.eventNumber{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.eventNumber h2{
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+.eventContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.eventTextField{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.eventImage{
+    width: 30%;
+    height: auto;
+}
+
+.eventImage img{
+    width: 100%;
+    height: auto;
+}
+
+.eventDescription{
+    height: 100%;
+    line-height: var(--lineheight);
+    width: 70%;
+}
+
+.eventDescription h2{
+    font-family: var(--headers);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.eventNumber h3{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.eventDescription p{
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
 
 /* Aktiviteter året rundt */
 #aktiviRundt{
@@ -905,15 +1077,18 @@ header{
     transition: 0.5s;
 }
 
+
+
 #SocBanner{
+    font-family: var(--mainfont);
     padding-top: 9rem;
     padding-bottom: 9rem;
     padding-left: 10rem;
     padding-right: 10rem;
     background-color: var(--black);
     color: var(--white);
-    font-size: 3rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 300;
     text-align: center;
 }
 
@@ -1198,6 +1373,11 @@ header{
     font-size: 1.2rem;
 }
 
+#goBack a:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
 #bookingHeaderSection{
     display: flex;
     justify-content: space-between;
@@ -1431,11 +1611,6 @@ header{
 
 /* BOOKNING AF INTRO */
 
-
-
-
-    
-
 /* KONTAKT */
 #KontaktHeader{
     display: flex;
@@ -1570,8 +1745,6 @@ header{
 } 
 
 /* HAVS SHOP - SIDE */
-
-
 .shopHeaderSection{
     padding-top: 10rem;
 }
@@ -1657,7 +1830,6 @@ header{
 }
 
 /* Nyeste varer - shop */
-
 #varerUnderTekst{
     display: flex;
     justify-content: space-between;
@@ -1683,8 +1855,8 @@ header{
 #shopNyesteProdukt{
     font-family: 'Circular Std Book', sans-serif;
     max-width: 22%;
+    margin-bottom: 4rem;
 }
-
 
 #varerUnderTekst a{
     font-family: var(--mainfont);
@@ -1698,8 +1870,8 @@ header{
     padding-bottom: 0.6rem;
     display: flex;
     flex-direction: row;
+    line-height: var(--lineheight);
 }
-
 
 #shopUnderBanner{
     padding-left: 10rem;
@@ -1709,7 +1881,6 @@ header{
     height: 100%;
     width: 100%;
 }
-
 
 #shopUnderBannerBillede{
     width: 50%;
@@ -1736,8 +1907,6 @@ header{
     padding-bottom: 1.5rem;
     padding-bottom: 5rem;
 }
-
-
 
 #nyhedsbrevShopBanner{
     background-color: var(--beige);
@@ -1824,7 +1993,6 @@ header{
     font-size: 2rem;
     padding-bottom: 2rem;
 }
-
 
 #shopProduktHeaderTekst p{
     font-size: 1.2rem;
@@ -1914,6 +2082,11 @@ header{
     background-color: var(--white);
 }
 
+.faqSection{
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+}
+
 #sectionFaq h2{
     font-family: var(--mainfont);
     font-weight: 400;
@@ -1989,6 +2162,12 @@ header{
     display: none;
     overflow: hidden;
     border-radius: 8px;
+}
+
+.panel ul{
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--black);
 }
 
 .panel p{

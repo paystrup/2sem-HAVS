@@ -1,0 +1,41 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "titel": "Åbningsfest",
+        "type": "kultur",
+        "beskrivelse": "Live musik. God Jazz, masser af Mikeller øl på fad og god stemning. Vi åbner i Århus, og du er velkommen til at tage dine venner med.",
+        "dag": "01.",
+        "måned": "juni",
+        "foto": "åbningsfest.png"
+      },
+      {
+        "id": 2,
+        "titel": "Fællesspisning",
+        "type": "mad",
+        "beskrivelse": "Tag en ven under armen, og kom til fællesspisning på HAVS. Mad lavet med kærlighed og lokale råvarer.",
+        "dag": "10.",
+        "måned": "juni",
+        "foto": "fællesspisning.png"
+      },
+      {
+        "id": 3,
+        "titel": "Tatovør besøg",
+        "type": "kultur",
+        "beskrivelse": "Vi får besøg af to dygtige tatovører i butikken ved Bassin 7, og masser af lækker live musik fra husets DJ. Kom forbi til en tattoo eller en fadøl.",
+        "dag": "17.",
+        "måned": "juni",
+        "foto": "tattooevent.png"
+      },
+      {
+        "id": 4,
+        "titel": "Redbull Wakeboard Event",
+        "type": "vandsport",
+        "beskrivelse": "Red Bull afholder årets fedeste konkurrence ved os på Aarhus Ø. Et udvalg af verdens bedste wakeboardere skal dyste om tronen i vandparken. God stemning og masser af fart over feltet.",
+        "dag": "28.",
+        "måned": "juni",
+        "foto": "wakeboardevent.png"
+      }
+    ]
+  }
+  
