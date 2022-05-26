@@ -346,7 +346,7 @@ footer h4{
 }
 
 #footerLogo p{
-    font-weight: 600;
+    font-weight: 100;
 }
 
 #footerKontaktSome svg{
@@ -359,6 +359,21 @@ footer{
     justify-content: space-between;
     padding: 8rem 10rem 8rem 10rem;
     line-height: 160%;
+}
+
+/* FOOTER VEJRINFO FRA OPENWEATHERMAP API footer.js imported her fra */
+#vejrinfo{
+    color: var(--black);
+    font-family: var(--mainfont);
+}
+
+#vindRetning{
+    display: flex;
+    gap: 15px;
+}
+
+#vindRetning svg{
+    height: 25px;
 }
 
 /* LANDING PAGE */
@@ -399,7 +414,7 @@ footer{
 }
 
 #landingText{
-    padding-top: 35vh;
+    padding-top: 33vh;
     padding-left: 12rem;    
     color: var(--white);
     z-index: 99;
@@ -572,9 +587,11 @@ footer{
     font-size: 10rem;
     font-family: 'kepler-std-semicondensed-dis', serif; 
     font-weight: 100;
+    letter-spacing: -.5rem;
+
 }
 
-#italicFont{
+#missionBanner i{
     font-family: 'kepler-std-semicondensed-dis', serif; 
     font-style: italic;
     font-weight: 100;
@@ -1008,7 +1025,6 @@ header{
 /* Aktiviteter året rundt */
 #aktiviRundt{
     padding-top: 10rem;
-    padding-bottom: 10rem;
 }
 
 #Overtekst{
@@ -1173,11 +1189,16 @@ header{
 }
 
 #vesterTekst{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
     background-color: var(--beige);
     max-width: 50%;
-    padding-left: 12rem;
-    padding-right: 12rem;
-}
+    padding-right: 10rem;
+    padding-left: 10rem;
+}   
 
 #vesterTekst h3{
     font-family: 'Circular Std Medium', sans-serif;
@@ -1196,27 +1217,26 @@ header{
 
 /* Frederik afsnit */
 #frederik{
+    height: 68vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--black);
-    height: 50%;
-    width: 100%;
-    padding-left: 10rem;
 }
 
 #frederikBillede{
+    background-image: url('/media/omhavsfrederik5.png');
+    background-position: center;
+    background-size: cover;
     width: 50%;
-}
-
-#frederikBillede img{
-    width: auto;
     height: 100%;
 }
 
+
 #frederikTekst{
+    padding-left: 10rem;
     background-color: var(--black);
-    max-width: 50%;
+    width: 50%;
 }
 
 #frederikTekst h3{
@@ -2500,6 +2520,8 @@ header{
 
 .nav-links {
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar{

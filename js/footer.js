@@ -3,6 +3,7 @@ footercontent.innerHTML = `
     <div id="footerLogo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 515.05 155.08"><g id="Lag_2" data-name="Lag 2"><g id="Lag_1-2" data-name="Lag 1"><path d="M99.17,152.34V82.5H13.5v69.84H0V2.74H13.5V70.26H99.17V2.74h13.5v149.6Z"/><path d="M215.22,2.74h-16L148.41,128.18l-.7,1.71h14.74a57.27,57.27,0,0,1,26.36-23.77c1.66-.75,3.4-1.45,5.22-2.08l.36-.12c-.33.72-.63,1.46-.91,2.2a32.15,32.15,0,0,0,.05,22.4c7,18.63,25.81,21.5,32,22.44l.27,0,.26,0c6.67.74,12.74,1.16,19.11,1.3q2.51.06,5.1.06c1.92,0,3.85,0,5.8-.06l2.68-.06v.06h17Zm35.05,136.45a198.53,198.53,0,0,1-22.75-1.27c-10.74-1.64-18.35-5.26-21.63-14a19,19,0,0,1,11.17-24.48,18.7,18.7,0,0,1,4.86-1.12,30.71,30.71,0,0,0-21.44-8.57,32.73,32.73,0,0,0-10.77,1.84,73.8,73.8,0,0,0-15.57,7.48L207,16l35.87,90.09,13.26,33C254.13,139.17,252.2,139.19,250.27,139.19Z"/><path d="M388.24,2.74h14.13l-57.6,149.6H331.48L274.72,2.74h14.35L338.44,136.3Z"/><path d="M501.75,40.93c-3.16-15.4-14.13-29.11-36.5-29.11-17.93,0-34.18,12-34.18,29.54,0,13.5,8.44,22.78,23.63,26.37L477.49,73c23.21,5.49,37.56,19,37.56,40.09,0,23-19.41,42-49.59,42-32.91,0-51.06-21.73-53.59-44.52l12.45-4c1.9,19.42,16.46,36.51,41.14,36.51,23,0,36.29-12.66,36.29-28.91,0-13.93-9.7-24.05-26.79-28.06l-22.58-5.28c-20-4.64-34.6-17.3-34.6-38.61C417.78,19,440.14,0,464.83,0c30.6,0,44.52,17.72,48.74,36.71Z"/><path d="M12.75,3.72v147.8H.84V3.72H12.75m.84-.85H0V152.36H13.59V2.87Z"/><path d="M111.83,3.64V151.45H100V3.64h11.8m.84-.84H99.19V152.29h13.48V2.8Z"/><path d="M98.59,70.87v11H14.2v-11H98.59m.6-.61H13.59V82.5h85.6V70.26Z"/><path d="M147.59,129.89h.12l.7-1.71C148.12,128.76,147.84,129.33,147.59,129.89Z"/></g></g></svg>
         <p>&#169; HAVS 2022</p>
+        <div id="vejrinfo"></div>
     </div>
 
     <div id="footerMenu">
@@ -32,6 +33,7 @@ footercontent.innerHTML = `
             <a href = "mailto: havs@havs.dk">havs@havs.dk</a>
         </div>
 
+        <p id="dagensAabningstid"></p>
         <p>
             Man-Fre: 10-18
             <br>Lørdag: 10-20
@@ -59,3 +61,110 @@ footercontent.innerHTML = `
     </div>
 `
 
+
+
+// INDSÆT VEJRDATA I FOOTER FRA OPENWEATHERMAP MED JSON API
+/*
+@datasæt hentes sådan:
+
+http://api.openweathermap.org/data/2.5/weather?
+q=Aarhus
+&lang=da
+&units=metric
+&appid={API KEY HER}
+*/
+
+// appid = API key - husk metric units
+// cc4402e4d6cb871ddf65df7ca30b62b8
+
+
+// get the weather data via query URI gennem fetch
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=8b54b7e60b7f6a8cff52734f0a34c50b").then(response => {
+    return response.json();
+}).then(data => {
+
+    // Work with JSON data here
+    console.log(data); // show what's in the json
+
+    // solnedgang
+    var sunsetMs = data.sys.sunset * 1000; // dato-objektet har brug for millisek. Derfor * 1000
+    var sunset = new Date(sunsetMs);
+     // Datoformattering @URI < https://www.w3schools.com/js/js_date_methods.asp >
+    var sunsetTime = sunset.getHours() + ":" + (sunset.getMinutes() < 10 ? '0' : "") + sunset.getMinutes();
+
+    //solopgang
+    var sunriseMs = data.sys.sunrise * 1000; // dato-objektet har brug for millisek. Derfor * 1000
+    var sunrise = new Date(sunriseMs);
+    var sunriseTime = sunrise.getHours() + ":" + (sunrise.getMinutes() < 10 ? '0' : "") + sunrise.getMinutes();
+
+    //formattering af grader, fjern komma med toFixed(1) max 1 komma
+    var tempData = data.main.temp
+    let tempCalc = tempData.toFixed(1)
+
+    var tempMinData = data.main.temp_min //min temp
+    let tempMinCalc = tempMinData.toFixed(1)
+
+    var tempMaxData = data.main.temp_max //max temp
+    let tempMaxCalc = tempMaxData.toFixed(1)
+
+
+
+    // Tilføj til footer div
+    vejrinfo.innerHTML = `
+            <div class="vejrIkonFooter">
+                <figure> ${'<img src="media/weathermap/' + data.weather[0].icon + '.png">'} </figure>
+            </div>
+
+            <div class="vejrInfoHeader">
+                <h3> ${data.name} ${tempCalc}&deg</h3>
+                <div id="vindRetning">
+                    <p>${data.wind.speed} m/s</p>
+                    <svg id="vindretningpic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 329.4c12.51-12.51 32.76-12.49 45.25 0L128 402.8V32c0-17.69 14.31-32 32-32s32 14.31 32 32v370.8l73.38-73.38c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128c-12.5 12.5-32.75 12.5-45.25 0l-128-128C-3.125 362.1-3.125 341.9 9.375 329.4z"/></svg> 
+                </div>
+            </div>
+        `
+
+        // vindens retning
+        let roter = data.wind.deg
+        vindretningpic.style.transform = "rotate(" + roter + "deg)";
+
+        /*
+        // tilføjer vejrsymbol
+        '<figure>' +
+        '<img src="images/' + data.weather[0].icon + '.png" alt="Vejrsymbol">' +
+        '</figure>' +
+
+        // tilføjer klokkeslet for solens nedgang i vest
+        '<p> Solnedgang: ' + sunsetTime + '</p>' +
+
+        // afslutter #weatherInfo taggen
+        '</div>'); // .append til #result slut
+        */
+
+    // kilde + standard ikoner: https://openweathermap.org/weather-conditions
+    // custom ikoner til HAVS findes i media/weathermap/.
+}).catch(err => {
+    // Do something for an error here
+    console.log('There was an error: ' + err);
+});
+
+
+// Indsæt dags dato i footeren og dagens åbningstider
+// switch case, der vælger dag og outputter dagens åbningstider i footer
+let day; // for at kunne bruges ved innerHTML nedenfor
+
+switch (new Date().getDay()) { 
+
+  case 6:
+    day = 'Åbningstider i dag: kl. 10-20';
+    break;
+  case 7:
+    day = 'Vi har lukket i dag.';
+    break;
+
+    // alle dage, der ikke er defineret som cases, man-fre samme åbningstider
+  default:
+    day = 'Åbningstider i dag: kl.10-18'
+}
+
+dagensAabningstid.innerHTML = day;
