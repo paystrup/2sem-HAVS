@@ -1278,8 +1278,16 @@ header{
 
 /* 404 SIDE */
 #fejlSide{
+    height: 100vh;
+    background-image: url('/media/404side-baggrund---Kopi.png');
+    background-position: center;
+    background-size: cover;
+    width: auto;
+}
+
+#fejlSideBox{
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 12rem;
     padding-left: 10rem;
     padding-right: 10rem;
     padding-bottom: 10rem;
@@ -1288,7 +1296,7 @@ header{
 #Tekst404{
     font-family: var(--mainfont);
     color: var(--black);
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 /* BOOKING STARTSIDE */
