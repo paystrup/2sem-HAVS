@@ -1,0 +1,37 @@
+{
+    "kurser": [
+      {
+        "id": 1,
+        "titel": "Intro surf & SUP kursus",
+        "varighed": "Varighed 2 timer",
+        "beskrivelse": "Lær at surfe eller SUP (Stand Up Paddle). Prisen er inkl. alt udstyr og der er mulighed for sauna efter kurset.",
+        "pris": 399,
+        "foto": "introsurf.png",
+        "alt": "Intro hold surfere på kursus, gode bølger og masser af sol",
+        "type": "kursus",
+        "link": "bookintro.html"
+      },
+      {
+        "id": 2,
+        "titel": "Privat surf & SUP kursus",
+        "varighed": "Varighed 1 time",
+        "beskrivelse": "Undervisning med privat intruktør, hvor du lærer at læse vandforholdene og at forstå bølgerne. Max 4 pers. Prisen er inkl. alt udstyr.",
+        "pris": 399,
+        "foto": "privatsurf.png",
+        "alt": "Surfer på vej til privat surf kursus, surfboard under armen ved vesterhavet, sort våddragt og sort surfboard",
+        "type": "kursus",
+        "link": "bookPrivatKursus.html"
+      },
+      {
+        "id": 3,
+        "titel": "Grupper/Familie",
+        "varighed": "Varighed 2 timer",
+        "beskrivelse": "Undervisning til større grupper/familie i SUP-boarding med privat instruktør. Begyndervenligt. Min. 4 pers. Max. 10 pers.",
+        "pris": 599,
+        "foto": "gruppefamilie.png",
+        "alt": "Familie på vej til familue surf kursus med HAVS, surfere løber i vandet sammen med instruktøren",
+        "type": "kursus",
+        "link": "bookGruppeFamilie.html"
+      }
+    ]
+  }

@@ -14,6 +14,7 @@ function toggleNav() {
 }
 
 // NYHEDSBREV FORM + validation
+// email må ikke være empty og skal indeholde . + @
 // Inspireret af https://stackoverflow.com/questions/20588026/validating-email-address-using-jscript-without-a-regular-expression 
 btn1.addEventListener('click', function() {
 

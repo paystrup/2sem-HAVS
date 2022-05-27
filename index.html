@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
+    <!-- Import CDN Flickity til carousel slider -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 <body>
     <main>
@@ -24,13 +26,15 @@
         <section id="landing">
             <video autoplay muted loop id="myVideo">
                 <source src="media/havs-landingpage-video.mp4" type="video/mp4">
+                <meta itemprop="name" content="HAVS' koncept">
+                <meta itemprop="description" content="HAVS' univers med surfing, livsstilsshop, café og fællesskab, som skaber den gode vesterhavsstemning.">
             </video>
             <div id="landingText">
                 <h1><span>Velkommen til</span> HAVS Aarhus</h1>
                 <p>
                     Et univers, hvor surfing, livsstilsbutik og café er samlet under et tag - og hvor <u>alle er velkomne.</u>
                     Vi elsker kvalitet, lokale råvarer og bæredygtighed. 
-                    Kom forbi og oplev <u>ægte Vesterhavs-stemning.</u>
+                    Kom forbi og oplev <u>ægte vesterhavsstemning.</u>
                 </p>
                 <a id="buttonMain" href="#koncept">Læs mere</a>  
             </div>
@@ -159,17 +163,33 @@
             <div id="testimonialsBox">
                 <div id="tBoxLeft">
                     <div id="tBoxLeftTop">
-                        
-
-
+                        <div class="carousel" data-flickity='{ "autoPlay": 5000, "freeScroll": true, "wrapAround": false, "pageDots": true, "prevNextButtons": false, "pauseAutoPlayOnHover": true}'>
+                            <div class="carousel-cell testimonial">
+                                <div id="carouselText">
+                                    <h4>Fantastisk koncept og fællesskab!</h4>
+                                    <p>Tak for en dejlig aften til fællesspisning. Virkelig lækker mad og fantastisk service. Sjældent har jeg oplevet så imødekommende personale, der forstår ens behov. Tusind tak. Vi ses snart igen.
+                                        <br><br> - Brian Hansen, Løkken
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-cell testimonial">
+                                <h4>Vesterhavsstemning uden lige.</h4>
+                                <p>Tak for at give tage mig tilbage til min tid ved Vesterhavet. Dejligt lille udpluk af det vestlige Danmark lige i centrum af Aarhus. Jeres kaffe og mad er fantastisk, og jeg kommer snart tilbage.
+                                    <br><br> - Birthe Larsen, Aarhus
+                                </p>
+                            </div>
+                            <div class="carousel-cell testimonial">
+                                <h4>Det bedste begynderkursus jeg har prøvet.</h4>
+                                <p>Har lige overstået mit første SUP-kursus sammen med min kæreste, og jeg må virkelig sige, at I er gode til at tage hånd om nybegyndere som os. Dejlig personale, der formår at gøre en tryg på vandet - samtidig med at der er godt med humor.
+                                    <br><br> - Laura Falster, Silkeborg
+                                </p>
+                            </div>
+                          </div>
                     </div>
-                    <div id="tBoxRightBottom">
-
-                    </div>
-
                 </div>
                 <div id="tBoxRight">
                     <div id="tBoxRightText">
+                        <h4>Kunden er vores førsteprioritet.</h4>
                         <!-- Hvis man havde adgang til firmaets konto, burde Trustpilots egen widget blive brugt https://support.trustpilot.com/hc/da/articles/203840826-S%C3%A5dan-tilf%C3%B8jer-du-en-TrustBox-widget-til-en-webside være brugt-->
                         <p>Vi elsker glade kunder og <u>har altid kunden i fokus.</u> Læs udtalelser fra kunder til venstre. Tøv ikke med at kontakte os og fortælle os om din oplevelse, eller hvad vi kan gøre bedre.</p>
                     </div>
@@ -247,7 +267,7 @@
             <div id="nbTekstInput">
                 <form id="contact" action="#">
                     <fieldset id="f1">
-                      <input type="email" id="Email" name="Email" value="" placeholder="Email">
+                      <input type="email" id="Email" name="Email" placeholder="Email">
                       <div class="knapperfieldset">
                           <div id="btn1" class="btn">Tilmeld</div>
                       </div>
@@ -258,7 +278,42 @@
                   </form>
             </div>
         </section>
-     
+
+        <section id="blivInspireret">
+            <div id="inspoSkrift">
+                <h2>
+                    <b>Bliv</b> inspireret
+                </h2>
+            <div id="hashtaghavs">
+                <h3>
+                    Med #HAVSYOURDAY
+                </h3> 
+            </div>
+            <div id="inspoFotoGalleri">
+                <div id="inspoNyesteGrid">
+                    <div id="inspoNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="https://www.instagram.com/husethavs/?hl=en">
+                            <img src="media/inspire-instapost-1-1080x1350.png" alt="Inspirerende, tekst med hashtag, HAVS, Løkken, Aarhus, Del med venner, Instagram post, Instagram">
+                        </a>
+                    </div> 
+                    <div id="inspoNyesteProdukt">
+                        <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
+                            <img src="media/inspire-instapost-2-1080x1350.png" alt="Inspirende, billeder, tekst med hashtah, HAVS, Løkken, Aarhus, brug hashtag.">
+                        </a>
+                    </div> 
+                    <div id="inspoNyesteProdukt">
+                        <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
+                            <img src="media/inspire-instapost-3-1080x1350.png" alt="Inspirende, billeder, tekst med hashtah, HAVS, Løkken, Aarhus, brug hashtag.">
+                        </a>
+                    </div> 
+                    <div id="inspoNyesteProdukt">
+                        <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
+                            <img src="media/inspire-instapost-4-1080x1350.png" alt="Inspirende, billeder, tekst med hashtag, HAVS, Løkken, Aarhus, brug hashtag.">
+                        </a>
+                    </div> 
+                </div>       
+            </div>
+        </section>
 
         <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
         <footer id="footercontent"></footer>
@@ -269,6 +324,9 @@
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
+
+    <!-- Import CDN Flickity til carousel slider-->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     
 </body>
 </html>

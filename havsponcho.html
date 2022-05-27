@@ -46,8 +46,14 @@
                 </div>
 
                 <div id="shopProduktButtons">
-                    <a id="buttonOutline" href="#">Vælg størrelse</a>
-                    <a id="buttonMain" href="#">Læg i kurv</a>
+                    <select class="størrelse">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                    </select>
+                    <a id="buttonMain" href="404.html">Læg i kurv</a>
                 </div>
                 <div id="shopProduktGuidelines">
                     <div id="faqKasser">
@@ -70,105 +76,14 @@
             </div>
         </section>
 
-        <section id="shopTeaser">
-            <div id="shopTeaserHeader">
-                <h3>Andre købte også</h3>
-                <a href="#">Gå til shop</a>
-            </div>
-            <div id="shopNyesteGrid">
-                <div id="shopNyesteProdukt">
-                    <img src="media/shoptest.png" alt="">
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Poncho</b></p>
-                        <p><b>349 DKK</b></p>
-                    </div>
-                    <p>HAVS Surf Poncho holder dig varm efter en tur på vandet. Fåes i navy, grøn og beige.</p>
-                </div>
-                <div id="shopNyesteProdukt">
-                    <img src="media/shoptest.png" alt="">
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Hoodie</b></p>
-                        <p><b>500 DKK</b></p>
-                    </div>
-                    <p>Grøn HAVS Hoodie er unisex, og kan vælges i flere varianter. Lavet af bæredygtigt materiale.</p>
-                </div>
-                <div id="shopNyesteProdukt">
-                    <img src="media/havs-tshirt-classic-logo-1000x850.png" alt="">
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Classic Logo T-Shirt</b></p>
-                        <p><b>300 DKK</b></p>
-                    </div>
-                    <p>Hvid HAVS T-Shirt er unisex, og kan vælges i flere varianter. Lavet af bæredygtigt materiale. </p>
-                </div>
-                <div id="shopNyesteProdukt">
-                    <img src="media/shoptest.png" alt="">
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Plakat</b></p>
-                        <p><b>150 DKK</b></p>
-                    </div>
-                    <p>HAVS Plakat er designet af vores dygtige medarbejdere. <br>Mål 30x40.</p>
-                </div>
-            </div>
-        </section>
+        <!-- IMPORTERES FRA produkt.js - produkt teasers -->
+        <section id="produktSideShopTeaser"></section>
 
-        <section id="nyhedsbrevShopBanner">
-            <div id="nbShopTekst">
-                <h3>Er dette dit første køb? <span>Spar 10% ved at tilmelde dig vores nyhedsbrev.</span></h3>
-            </div>
-            <div id="nbShopTekstInput">
-                <form id="contact" action="#">
-                    <fieldset id="f1">
-                      <input type="email" id="Email" name="Email" value="" placeholder="Email">
-                      <div class="knapperfieldset">
-                          <div id="btn1" class="btn">Tilmeld</div>
-                      </div>
-                    </fieldset>
-                    <fieldset id="f2">
-                        <p>Tak! Du er nu tilmeldt vores nyhedsbrev.</p> 
-                    </fieldset>
-                  </form>
-            </div>
-        </section>
+        <!-- IMPORTERES FRA produkt.js - nyhedsbrev banner + submitform -->
+        <section id="produktSideNbBanner"></section>
 
-        <section id="blivInspireret">
-            <div id="inspoSkrift">
-                <h2>
-                    <b>Bliv</b> <i>inspireret</i>
-                </h2>
-            <div id="hashtaghavs">
-                <h3>
-                    Med
-                </h3>
-                <h2>
-                    #HAVSYOURDAY
-                </H2>    
-            </div>
-        </section>
-
-        <div id="inspoFotoGalleri">
-            <div id="inspoNyesteGrid">
-                <div id="inspoNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="https://www.instagram.com/husethavs/?hl=en">
-                        <img src="media/inspire-instapost-1-1080x1350.png" alt="Inspirerende, tekst med hashtag, HAVS, Løkken, Aarhus, Del med venner, Instagram post, Instagram">
-                    </a>
-                </div> 
-                <div id="inspoNyesteProdukt">
-                    <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
-                        <img src="media/inspire-instapost-2-1080x1350.png" alt="Inspirende, billeder, tekst med hashtah, HAVS, Løkken, Aarhus, brug hashtag.">
-                    </a>
-                </div> 
-                <div id="inspoNyesteProdukt">
-                    <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
-                        <img src="media/inspire-instapost-3-1080x1350.png" alt="Inspirende, billeder, tekst med hashtah, HAVS, Løkken, Aarhus, brug hashtag.">
-                    </a>
-                </div> 
-                <div id="inspoNyesteProdukt">
-                    <a id="shopProduktLinkBillede" target="_blank" href="https://www.instagram.com/husethavs/?hl=en">
-                        <img src="media/inspire-instapost-4-1080x1350.png" alt="Inspirende, billeder, tekst med hashtag, HAVS, Løkken, Aarhus, brug hashtag.">
-                    </a>
-                </div> 
-            </div>       
-        </div>
+        <!-- IMPORTERES FRA produkt.js - Instagram banner #havsyourday -->
+        <section id="produktSideInstaBanner"></section>
 
     <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
     <footer id="footercontent"></footer>
@@ -180,7 +95,9 @@
 <script src="js/footer.js"></script>
 <script src="js/js.js"></script>
 <script src="js/kontakt.js"></script>
+<!-- TIL ACCORDION-->
 <script src="js/faq.js"></script>
+<script src="js/produkt.js"></script>
 
 </body>
 </html>

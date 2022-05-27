@@ -1,22 +1,5 @@
 // Kontakt JS
 
-// Kontakt
-buttonSubmitKontakt.addEventListener('click', function() {
-
-  if (document.getElementById("mail").value == "" 
-      || document.getElementById("mail").value == null
-      || ( document.getElementById("mail").value.indexOf('@') === -1 )
-      || ( document.getElementById("mail").value.indexOf('.') === -1 ))
-      {
-    alert('Indtast en gyldig email, der indeholder @.');
-    //return false;
-  } else {
-    // Vis success, display: block
-    f2.style.display = 'block'
-    // Skjul input f1 display: none
-    f1.style.display = 'none'
-  }
-})
 
 // FAQ
 /* Inspireret fra https://www.w3schools.com/howto/howto_js_accordion.asp */
@@ -33,5 +16,13 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "block";
     }
   });
+}
+
+// Til action, hvis contact form er valideret i HTML via. patterns og REGEX
+// Viser ny div. med sucessstate
+
+function formSuccess() {
+  kontaktf1.style.display = "none";
+  kontaktf2.style.display = "block";
 }
 

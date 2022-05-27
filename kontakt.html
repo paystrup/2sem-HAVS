@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nikolaj Pejstrup, Karoline Aaby & Christoffer Ingemann">
-    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus">
+    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, Kontakt HAVS, HAVS besked, HAVS spørgsmål, HAVS nummmer, HAVS mail, HAVs sociale medier, ring til HAVS, HAVS åbningstider">
     <meta name="description" content="HAVS Aarhus er en café, livsstilsbutik og surfshop, der tilbyder kursus i surfing og SUP. Kom og få en uforglemmelig oplevelse i vores butik ved Aarhus Ø, Bassin 7.">
     <title>HAVS - Kontakt</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
@@ -56,10 +56,10 @@
         </div>
         
         <div id="kontaktFormHeader">
-            <form id="kontaktForm" name="kontaktForm" action="#" onsubmit="return validateForm()" method="post"> <!--https://www.w3schools.com/howto/howto_css_contact_form.asp-->
-                <fieldset>
+            <form id="kontaktForm" name="kontaktForm" action="javascript:;" onsubmit="formSuccess();"> <!--https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+                <fieldset id="kontaktf1">
                     <label for="fname">Hvad hedder du?</label><br>
-                    <input type="text" id="navn" name="navn" placeholder="Navn" pattern="[A-Za-z]{1,32}"><br><br> <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_placeholder -->
+                    <input type="text" id="navn" name="navn" placeholder="Navn" pattern="[A-Za-z]+{1,32}"><br><br> <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_placeholder -->
                     
                     <label for="fname">Hvad er din mail?</label><br>
                     <input type="text" id="mail" name="mail" placeholder="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"><br><br> <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_placeholder -->
@@ -68,7 +68,10 @@
                     <textarea id="besked" name="besked" placeholder="Besked" style="height:200px"></textarea><br><br>
                     
                     <input id="buttonSubmitKontakt" type="submit" value="Send Besked">
-                    
+                </fieldset>
+                <fieldset id="kontaktf2">
+                    <h2>Tak for dit fantastiske spørgsmål!</h2>
+                    <p>Din besked er nu sendt. Vi vil vende tilbage hurtigst muligt.</p> 
                 </fieldset>
             </form>
 
