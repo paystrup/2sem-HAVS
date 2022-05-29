@@ -28,7 +28,7 @@ fetch('json/events.json')
     // Forloop og load hele array som default, alle events loades
     for (let i=0; i<havsEvents.events.length; i++){
       eventsSelected.innerHTML += `
-        <div class="eventContainer">
+        <div class="eventContainer" data-aos="fade-up" data-aos-delay="400">
           <div class="eventImage">
             <img src="media/${havsEvents.events[i].foto}" alt="${havsEvents.events[i].titel}">
           </div>

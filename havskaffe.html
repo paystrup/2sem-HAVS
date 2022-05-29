@@ -11,82 +11,92 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
-        <!--NAVBAR CONTENT INDSÆTTES FRA NAV.JS-->
-        <nav>
-            <div class="navbar" id="navbar"></div>
-        </nav>
-        <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+            <!--NAVBAR CONTENT INDSÆTTES FRA NAV.JS-->
+            <nav>
+                <div class="navbar" id="navbar"></div>
+            </nav>
+            <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
+            <div id="container" class="container"></div>
 
-        <header id="goBackHeader">
-            <div id="goBack">
-                <a href="shop.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"/></svg> Gå tilbage</a>
-            </div>
-        </header>
-
-        <section id="shopProduktHeaderSection">
-            <div id="shopBillede">
-                 <img src="media/havs-kaffe-havsyourmorning-1000x850.png" alt="HAVS Havs Your Morning Kaffe. Lokalristet i Løkken, økologisk kaffe.">
-            </div>
-            <div id="shopProduktHeaderTekst">
-                <div id="produktBeskrivelse">
-                    <h5>HAVS</h5>
-                    <h2>Havs Your Morning? Kaffe</h2>
-                    <h4>75,00 DKK</h4>
-                    <p>
-                        Vores egen espressoblend, lokalristet i Løkken. Lavet med kærlighed.
-                        <br>
-                        HAVS Lokalristet Espressoblend. Medium styrke. Økologisk produceret. 100% Arabica 70% Brasilien natural.
-                        15% Sumatra semi-washed. 
-                        15% Columbia washed.
-                        <br><br>En lysere, sød espressoblend med medium fyldighed, og
-                        lækker cremet mundfylde og let afrundet citrussyrlighed, 
-                        der gør den velegnet til espressobaserede mælkedrikke. 
-                    </p>
-                    <p><b>Vægt:</b> 250g</p>
+            <header id="goBackHeader" data-aos="fade-up">
+                <div id="goBack">
+                    <a href="shop.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"/></svg> Gå tilbage</a>
                 </div>
+            </header>
 
-                <div id="shopProduktButtons">
-                    <a id="buttonMain" href="404.html">Læg i kurv</a>
+            <section id="shopProduktHeaderSection">
+                <div id="shopBillede" data-aos="fade-up" data-aos-delay="300">
+                    <img src="media/havs-kaffe-havsyourmorning-1000x850.png" alt="HAVS Havs Your Morning Kaffe. Lokalristet i Løkken, økologisk kaffe.">
                 </div>
-                <div id="shopProduktGuidelines">
-                    <div id="faqKasser">
-                        <button class="accordion">
-                            Levering og returnering
-                        </button>
-                        <div class="panel">
-                          <p>Levering dag til dag, hvis du bestiller før kl. 16 i hverdagene. Gratis returnering af ubrugte varer indenfor 14 dage.</p>
-                        </div> 
+                <div id="shopProduktHeaderTekst" data-aos="fade-up" data-aos-delay="200">
+                    <div id="produktBeskrivelse">
+                        <h5>HAVS</h5>
+                        <h2>Havs Your Morning? Kaffe</h2>
+                        <h4>75,00 DKK</h4>
+                        <p>
+                            Vores egen espressoblend, lokalristet i Løkken. Lavet med kærlighed.
+                            <br>
+                            HAVS Lokalristet Espressoblend. Medium styrke. Økologisk produceret. 100% Arabica 70% Brasilien natural.
+                            15% Sumatra semi-washed. 
+                            15% Columbia washed.
+                            <br><br>En lysere, sød espressoblend med medium fyldighed, og
+                            lækker cremet mundfylde og let afrundet citrussyrlighed, 
+                            der gør den velegnet til espressobaserede mælkedrikke. 
+                        </p>
+                        <p><b>Vægt:</b> 250g</p>
+                    </div>
+
+                    <div id="shopProduktButtons">
+                        <a id="buttonMain" href="404.html">Læg i kurv</a>
+                    </div>
+                    <div id="shopProduktGuidelines">
+                        <div id="faqKasser">
+                            <button class="accordion">
+                                Levering og returnering
+                            </button>
+                            <div class="panel">
+                            <p>Levering dag til dag, hvis du bestiller før kl. 16 i hverdagene. Gratis returnering af ubrugte varer indenfor 14 dage.</p>
+                            </div> 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- IMPORTERES FRA produkt.js - produkt teasers -->
-        <section id="produktSideShopTeaser"></section>
+            <!-- IMPORTERES FRA produkt.js - produkt teasers -->
+            <section id="produktSideShopTeaser"></section>
 
-        <!-- IMPORTERES FRA produkt.js - nyhedsbrev banner + submitform -->
-        <section id="produktSideNbBanner"></section>
+            <!-- IMPORTERES FRA produkt.js - nyhedsbrev banner + submitform -->
+            <section id="produktSideNbBanner"></section>
 
-        <!-- IMPORTERES FRA produkt.js - Instagram banner #havsyourday -->
-        <section id="produktSideInstaBanner"></section>
+            <!-- IMPORTERES FRA produkt.js - Instagram banner #havsyourday -->
+            <section id="produktSideInstaBanner"></section>
 
-    <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
-    <footer id="footercontent"></footer>
+        <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
+        <footer id="footercontent"></footer>
 
-</main>
+    </main>
 
-<!-- IMPORT JS -->
-<script src="js/nav.js"></script>
-<script src="js/footer.js"></script>
-<script src="js/js.js"></script>
-<script src="js/kontakt.js"></script>
-<!-- TIL ACCORDION-->
-<script src="js/faq.js"></script>
-<script src="js/produkt.js"></script>
+    <!-- IMPORT JS -->
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/kontakt.js"></script>
+    <!-- TIL ACCORDION-->
+    <script src="js/faq.js"></script>
+    <script src="js/produkt.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>
 
 </body>
 </html>

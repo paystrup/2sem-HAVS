@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
@@ -19,7 +21,7 @@
             <div class="navbar" id="navbar"></div>
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+        <div id="container" class="container"></div>
 
         <header id="udstyrOversigt">
             <div id="goBack">
@@ -28,25 +30,22 @@
         </header>
 
         <section id="voresKursus">
-            <h3>Hvilket type kursus vil du booke?</h3>
-            <div id="KCards">
-
-                <section id="introKursus"></section>
-                <section id="privatKursus"></section>
-
+            <h3 data-aos="fade-up">Hvilket type kursus vil du booke?</h3>
+            <div id="KCards" data-aos="fade-up" data-aos-delay="400">
+                <section id="insertKurser"></section>
             </div>
          </section>
 
          <section id="udstyrsBanner">
             <div id="udsBanner">
-                <h2>
+                <h2 data-aos="fade-up">
                     <b>Har du flere spørgsmål?</b> 
                     <br><span>Tag endelig kontakt!</span>
                 </h2>
             </div>
-            <div id="udstyrKnapper">
+            <div id="udstyrKnapper" data-aos="fade-up" data-aos-delay="300">
                 <div id="udstyrKnapper">
-                    <a id="buttonMain" href="tel:4527605098">Ring os op</a>
+                    <a id="buttonBlack" href="tel:4527605098">Ring os op</a>
                     <a id="buttonOutlineHvid" href="mailto:havs@havs.dk" target="_blank">Send mail</a>
                 </div>
             </div>
@@ -62,6 +61,14 @@
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
     <script src="js/kursus.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>
     
 </body>
 </html>

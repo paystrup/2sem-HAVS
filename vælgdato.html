@@ -7,12 +7,12 @@
     <meta name="author" content="Nikolaj Pejstrup, Karoline Aaby & Christoffer Ingemann">
     <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, intro kursus, privat kursus, famillie/gruppe kursus, book kursus">
     <meta name="description" content="HAVS Aarhus er en café, livsstilsbutik og surfshop, der tilbyder kursus i surfing og SUP. Kom og få en uforglemmelig oplevelse i vores butik ved Aarhus Ø, Bassin 7.">
-    <title>HAVS - Booking af Kursus</title>
+    <title>HAVS - Booking af Kursus - Vælg dato</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
-     <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
@@ -30,36 +30,28 @@
         </header>
 
         <section id="kursusSteps" data-aos="fade-up" data-aos-delay="200">
-            <img src="media/kStep1.png" alt="Steps til betaling af kursus">
+            <img src="media/kStep2.png" alt="Steps til betaling af kursus">
         </section>
 
-        <section id="chooseKursus" data-aos="fade-up" data-aos-delay="200">
-            <h2>Vælg antal personer</h2>
-
-            <div id="buyKursus" data-aos="fade-up" data-aos-delay="400"></div>
-
-        </section>
-
-        <section id="kursusKurv" data-aos="fade-up" data-aos-delay="200">
-            <div id="kursusKurvHeader">
-                <h4>Din ordre</h4>
-                <hr>
-
-            </div>
-            <div id="orders">
-                <div id="ordersList"></div>
-                <div id="sum"></div>
-                <div id="antalperson"></div>
-            </div>
-        </section>
- 
-        <section id="kursusKnapper1" data-aos="fade-up" data-aos-delay="200">
-            <div id="kursusNext">
-                <a type="button" href="vælgdato.html" id="buttonKursus">Næste</a>
-                <a id="buttonOutline" href="kursus.html">Gå tilbage</a>
+        <section id="chooseKursus">
+            <h2 data-aos="fade-up" data-aos-delay="200">Vælg dato for kursus</h2>
+            <!-- ingen action, da vi blot gemmer input values i local storage med js
+            derfor heller ingen submit knap, da vi gemmer values, til at kunne vise i kurv
+            skal der videresendes til backend, så indsættes de her -->
+            <form action="#" id="kursusDatoForm" data-aos="fade-up" data-aos-delay="300">
+                <div id="kursusDatoInputs">
+                    <label for="dato">Tidspunkt og dato for din booking</label>
+                    <input type="date" id="dato" name="date">
+                    <label for="appt"></label>
+                    <input type="time" id="appt" name="appt"> 
+                </div>        
+            </form>
+            <div id="kursusNext" data-aos="fade-up" data-aos-delay="400">
+                <a id="buttonMain" href="kurv.html">Næste</button>
+                <a id="buttonOutline" href="kursusbooking.html">Gå tilbage</a>
             </div>
         </section>
-
+  
       <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
       <footer id="footercontent"></footer>
 
@@ -69,7 +61,7 @@
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
-    <script src="js/kursusbooking.js"></script>
+    <script src="js/dato.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

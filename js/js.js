@@ -32,4 +32,3 @@ btn1.addEventListener('click', function() {
       f1.style.display = 'none'
     }
 })
-

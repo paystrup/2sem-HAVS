@@ -11,211 +11,221 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
-        <!--NAVBAR CONTENT INDSÆTTES FRA NAV.JS-->
-        <nav>
-            <div class="navbar" id="navbar"></div>
-        </nav>
-        <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+            <!--NAVBAR CONTENT INDSÆTTES FRA NAV.JS-->
+            <nav>
+                <div class="navbar" id="navbar"></div>
+            </nav>
+            <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
+            <div id="container" class="container"></div>
 
-        <section id="bookingHeaderSection" class="shopHeaderSection">
-            <div id="bookingHeaderTekst" class="shopHeaderTekst">
-                <h2>HAVS Sommer 22 er netop landet i shoppen</h2>
-                 <p>
-                    Vores nye kollektion SOMMER 22 er bæredygtigt 
-                    produceret og printet i Danmark ved Løkken. 
-                    <br>Find den i shoppen allerede nu.
+            <section id="bookingHeaderSection" class="shopHeaderSection">
+                <div id="bookingHeaderTekst" class="shopHeaderTekst">
+                    <h2 data-aos="fade-up">HAVS Sommer 22 er netop landet i shoppen</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">
+                        Vores nye kollektion SOMMER 22 er bæredygtigt 
+                        produceret og printet i Danmark ved Løkken. 
+                        <br>Find den i shoppen allerede nu.
+                        
+                    </p>
+                    <div id="bookingButtons" data-aos="fade-up" data-aos-delay="300">
+                        <a id="buttonMain" href="#">Se mere</a>
+                    </div>
+                </div>
+
+                <div id="bookingHeaderBillede" data-aos="fade-up" data-aos-delay="200">
+                    <img src="media/Havs-20.png" alt="Model til den nye HAVS Sommer 22 kollektion. Iført grøn HAVS Hoodie., HAVS, Sand, vesterhav, stemning, natur">
+                </div>
+            </section>
+
+            
+            <section id="shop">
+                <div id="shopHeader">
+                    <h3 data-aos="fade-up">Se vores udvalg</h3>
+                </div>
+                <div id="shopGrid" data-aos="fade-up" data-aos-delay="200">
+                    <div id="shopProdukt">
+                        <a id="shopProduktLinkBillede" href="surfclubtshirt.html">
+                            <img src="media/havs-tshirt-surfclub-white-1000x850.png" alt="HAVS Surf Club T-shirt fra Sommer 2022, hvid med blåt print på fronten, bæredygtigt design">
+                        </a>
+                        <div id="shopUnderTekst">
+                            <p>T-Shirts</p>
+                            <a href="surfclubtshirt.html">Se mere</a>
+                        </div>
+                    </div>
+
+                    <div id="shopProdukt">
+                        <a id="shopProduktLinkBillede" href="havsyourdayhoodie.html">
+                            <img src="media/havs-hoodie-havsyourday-green1000x850.png" alt="HAVS Grøn HAVS your day hoodie med print på fronten i hvid.">
+                        </a>
+                        <div id="shopUnderTekst">
+                            <p>Hoodies</p>
+                            <a href="havsyourdayhoodie.html">Se mere</a>
+                        </div>
+                    </div>
+
+                    <div id="shopProdukt">
+                        <a id="shopProduktLinkBillede" href="surfmembership.html">
+                            <img src="media/havs-membership-1000x850.png" alt="Folder med billede af vandet ved Aarhus Ø, der indeholder medlemsskab til Havs Surf Club i blåt.">
+                        </a>
+                        <div id="shopUnderTekst">
+                            <p>Accessories og andet</p>
+                            <a href="surfmembership.html">Se mere</a>
+                        </div>
+                    </div>
+            </section>
+
+
+            <section id="shopTeaser">
+                <div id="shopTeaserHeader">
+                    <h3 data-aos="fade-up">Nyeste varer i shoppen</h3>
+                    <a href="#" data-aos="fade-up" data-aos-delay="400">Gå til shop</a>
+                </div>
+                <div id="shopNyesteGrid" data-aos="fade-up" data-aos-delay="200">
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="havsponcho.html">
+                            <img src="media/havs-poncho-navy-1000x850.png" alt="Jersey Poncho fra HAVS, i Navy. Modellen har på billedet også en HAVS Cap på i navy.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Poncho</b></p>
+                            <p><b>349 DKK</b></p>
+                        </div>
+                        <p>Holder dig varm efter en tur på vandet. Fåes i navy, grøn og beige.</p>
+                    </div>
                     
-                </p>
-                <div id="bookingButtons">
-                    <a id="buttonMain" href="#">Se mere</a>
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="havsyourdayhoodie.html">
+                            <img src="media/havs-hoodie-havsyourday-green1000x850.png" alt="HAVS Grøn Hoodie med Palme print og HAVS your day print på fronten.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Your Day? Hoodie</b></p>
+                            <p><b>500 DKK</b></p>
+                        </div>
+                        <p>Grøn unisex hoodie, der er lavet i bæredygtigt materiale.</p>
+                    </div>
+                    
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="havsplakat.html">
+                            <img src="media/havs-plakat-a3-1000x850.png" alt="HAVS Plakat. Surfer ved Vestjylland, Løkken, Vesterhavet, Strand, Vand.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Plakat</b></p>
+                            <p><b>150 DKK</b></p>
+                        </div>
+                        <p>Designet og fotograferet af vores dygtige medarbejdere. Størrelse A3.</p>
+                    </div>
+
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="sorthavsclubtshirt.html">
+                            <img src="media/havs-tshirt-surfclub-black-1000x850.png" alt="Sort Havs Surf Club Tshirt, hvid print på fronten af t-shirten.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Surf Club T-Shirt</b></p>
+                            <p><b>300 DKK</b></p>
+                        </div>
+                        <p>Unisex tshirt, lavet af bæredygtigt materiale. Fåes i sort og hvid.</p>
+                    </div>
+
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="surfclubtshirt.html">
+                            <img src="media/havs-tshirt-surfclub-white-1000x850.png" alt="Sort Havs Surf Club Tshirt, hvid print på fronten af t-shirten.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Surf Club T-Shirt</b></p>
+                            <p><b>300 DKK</b></p>
+                        </div>
+                        <p>Unisex tshirt, lavet af bæredygtigt materiale. Fåes i sort og hvid.</p>
+                    </div>
+
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="havskaffe.html">
+                            <img src="media/havs-kaffe-havsyourmorning-1000x850.png" alt="HAVS Havs Your Morning Kaffe. Lokalristet i Løkken, økologisk kaffe.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>Havs Your Morning? Kaffe</b></p>
+                            <p><b>75 DKK</b></p>
+                        </div>
+                        <p>Vores egen espressoblend, lokalristet i Løkken. Lavet med kærlighed.</p>
+                    </div>
+
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="surfmembership.html">
+                            <img src="media/havs-membership-1000x850.png" alt="Folder med billede af vandet ved Aarhus Ø, der indeholder medlemsskab til Havs Surf Club i blåt.">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>Surf Club Medlemsskab</b></p>
+                            <p><b>500 DKK</b></p>
+                        </div>
+                        <p>Bliv en del af fællesskabet og få gratis adgang til vores faciliteter.</p>
+                    </div>
+
+                    <div id="shopNyesteProdukt">
+                        <a id="shopProduktLinkBillede" href="gavekort.html">
+                            <img src="media/havs-gavekort-1000x850.png" alt="HAVS Gavekort i indpakning med bølge på venstre side af kortet, og tekst til højre. Her står, 'Jeg er en gave fra en, du holder af. Måske'">
+                        </a>
+                        <div id="varerUnderTekst">
+                            <p><b>HAVS Gavekort</b></p>
+                            <p><b>500 DKK</b></p>
+                        </div>
+                        <p>Gavekortet til den, der har alt. Kan bruges i hele vores univers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="shopUnderBanner">
+                <div id="shopUnderBannerBillede" data-aos="fade-up" data-aos-delay="400">
+                    <img src="media/Havs-17.png" alt="HAVS T-Shirt, bæredygtighed, Surfer ved vandet, HAVS, Aarhus, Løkken, miljøet i fokus, tøjproduktion">
+                </div>
+                <div id="shopUnderBannertekst" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Vi har altid <b>miljøet i  fokus,</b> også i vores <u>tøjproduktion</u></h4>
+                    <div id="shopUnderKnap">
+                        <a id="buttonMain" href="omos.html#vesterStemning">Læs mere</a>
+                    </div>
                 </div>
             </div>
 
-            <div id="bookingHeaderBillede">
-                 <img src="media/Havs-20.png" alt="Model til den nye HAVS Sommer 22 kollektion. Iført grøn HAVS Hoodie., HAVS, Sand, vesterhav, stemning, natur">
-            </div>
-        </section>
-
-        
-        <section id="shop">
-            <div id="shopHeader">
-                <h3>Se vores udvalg</h3>
-            </div>
-            <div id="shopGrid">
-                <div id="shopProdukt">
-                    <a id="shopProduktLinkBillede" href="surfclubtshirt.html">
-                        <img src="media/havs-tshirt-surfclub-white-1000x850.png" alt="HAVS Surf Club T-shirt fra Sommer 2022, hvid med blåt print på fronten, bæredygtigt design">
-                    </a>
-                    <div id="shopUnderTekst">
-                        <p>T-Shirts</p>
-                        <a href="surfclubtshirt.html">Se mere</a>
-                    </div>
+            <section id="nyhedsbrevShopBanner" data-aos="fade-up" data-aos-delay="200">
+                <div id="nbShopTekst">
+                    <h3>Stay updated, <span>følg med når vi udgiver nye kollektioner.</span></h3>
                 </div>
-
-                <div id="shopProdukt">
-                    <a id="shopProduktLinkBillede" href="havsyourdayhoodie.html">
-                        <img src="media/havs-hoodie-havsyourday-green1000x850.png" alt="HAVS Grøn HAVS your day hoodie med print på fronten i hvid.">
-                    </a>
-                    <div id="shopUnderTekst">
-                        <p>Hoodies</p>
-                        <a href="havsyourdayhoodie.html">Se mere</a>
-                    </div>
+                <div id="nbShopTekstInput">
+                    <form id="contact" action="#">
+                        <fieldset id="f1">
+                        <input type="email" id="Email" name="Email" value="" placeholder="Email">
+                        <div class="knapperfieldset">
+                            <div id="btn1" class="btn">Tilmeld</div>
+                        </div>
+                        </fieldset>
+                        <fieldset id="f2">
+                            <p>Tak! Du er nu tilmeldt vores nyhedsbrev.</p> 
+                        </fieldset>
+                    </form>
                 </div>
+            </section>
 
-                <div id="shopProdukt">
-                    <a id="shopProduktLinkBillede" href="surfmembership.html">
-                        <img src="media/havs-membership-1000x850.png" alt="Folder med billede af vandet ved Aarhus Ø, der indeholder medlemsskab til Havs Surf Club i blåt.">
-                    </a>
-                    <div id="shopUnderTekst">
-                        <p>Accessories og andet</p>
-                        <a href="surfmembership.html">Se mere</a>
-                    </div>
-                </div>
-        </section>
+        <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
+        <footer id="footercontent"></footer>
 
+    </main>
 
-        <section id="shopTeaser">
-            <div id="shopTeaserHeader">
-                <h3>Nyeste varer i shoppen</h3>
-                <a href="#">Gå til shop</a>
-            </div>
-            <div id="shopNyesteGrid">
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="havsponcho.html">
-                        <img src="media/havs-poncho-navy-1000x850.png" alt="Jersey Poncho fra HAVS, i Navy. Modellen har på billedet også en HAVS Cap på i navy.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Poncho</b></p>
-                        <p><b>349 DKK</b></p>
-                    </div>
-                    <p>Holder dig varm efter en tur på vandet. Fåes i navy, grøn og beige.</p>
-                </div>
-                
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="havsyourdayhoodie.html">
-                        <img src="media/havs-hoodie-havsyourday-green1000x850.png" alt="HAVS Grøn Hoodie med Palme print og HAVS your day print på fronten.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Your Day? Hoodie</b></p>
-                        <p><b>500 DKK</b></p>
-                    </div>
-                    <p>Grøn unisex hoodie, der er lavet i bæredygtigt materiale.</p>
-                </div>
-                
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="havsplakat.html">
-                        <img src="media/havs-plakat-a3-1000x850.png" alt="HAVS Plakat. Surfer ved Vestjylland, Løkken, Vesterhavet, Strand, Vand.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Plakat</b></p>
-                        <p><b>150 DKK</b></p>
-                    </div>
-                    <p>Designet og fotograferet af vores dygtige medarbejdere. Størrelse A3.</p>
-                </div>
-
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="sorthavsclubtshirt.html">
-                        <img src="media/havs-tshirt-surfclub-black-1000x850.png" alt="Sort Havs Surf Club Tshirt, hvid print på fronten af t-shirten.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Surf Club T-Shirt</b></p>
-                        <p><b>300 DKK</b></p>
-                    </div>
-                    <p>Unisex tshirt, lavet af bæredygtigt materiale. Fåes i sort og hvid.</p>
-                </div>
-
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="surfclubtshirt.html">
-                        <img src="media/havs-tshirt-surfclub-white-1000x850.png" alt="Sort Havs Surf Club Tshirt, hvid print på fronten af t-shirten.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Surf Club T-Shirt</b></p>
-                        <p><b>300 DKK</b></p>
-                    </div>
-                    <p>Unisex tshirt, lavet af bæredygtigt materiale. Fåes i sort og hvid.</p>
-                </div>
-
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="havskaffe.html">
-                        <img src="media/havs-kaffe-havsyourmorning-1000x850.png" alt="HAVS Havs Your Morning Kaffe. Lokalristet i Løkken, økologisk kaffe.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>Havs Your Morning? Kaffe</b></p>
-                        <p><b>75 DKK</b></p>
-                    </div>
-                    <p>Vores egen espressoblend, lokalristet i Løkken. Lavet med kærlighed.</p>
-                </div>
-
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="surfmembership.html">
-                        <img src="media/havs-membership-1000x850.png" alt="Folder med billede af vandet ved Aarhus Ø, der indeholder medlemsskab til Havs Surf Club i blåt.">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>Surf Club Medlemsskab</b></p>
-                        <p><b>500 DKK</b></p>
-                    </div>
-                    <p>Bliv en del af fællesskabet og få gratis adgang til vores faciliteter.</p>
-                </div>
-
-                <div id="shopNyesteProdukt">
-                    <a id="shopProduktLinkBillede" href="gavekort.html">
-                        <img src="media/havs-gavekort-1000x850.png" alt="HAVS Gavekort i indpakning med bølge på venstre side af kortet, og tekst til højre. Her står, 'Jeg er en gave fra en, du holder af. Måske'">
-                    </a>
-                    <div id="varerUnderTekst">
-                        <p><b>HAVS Gavekort</b></p>
-                        <p><b>500 DKK</b></p>
-                    </div>
-                    <p>Gavekortet til den, der har alt. Kan bruges i hele vores univers.</p>
-                </div>
-            </div>
-        </section>
-
-        <div id="shopUnderBanner">
-            <div id="shopUnderBannerBillede">
-                <img src="media/Havs-17.png" alt="HAVS T-Shirt, bæredygtighed, Surfer ved vandet, HAVS, Aarhus, Løkken, miljøet i fokus, tøjproduktion">
-            </div>
-            <div id="shopUnderBannertekst">
-                <h4>Vi har altid <b>miljøet i  fokus,</b> også i vores <u>tøjproduktion</u></h4>
-                <div id="shopUnderKnap">
-                    <a id="buttonMain" href="omos.html#vesterStemning">Læs mere</a>
-                </div>
-            </div>
-        </div>
-
-        <section id="nyhedsbrevShopBanner">
-            <div id="nbShopTekst">
-                <h3>Stay updated, <span>følg med når vi udgiver nye kollektioner.</span></h3>
-            </div>
-            <div id="nbShopTekstInput">
-                <form id="contact" action="#">
-                    <fieldset id="f1">
-                      <input type="email" id="Email" name="Email" value="" placeholder="Email">
-                      <div class="knapperfieldset">
-                          <div id="btn1" class="btn">Tilmeld</div>
-                      </div>
-                    </fieldset>
-                    <fieldset id="f2">
-                        <p>Tak! Du er nu tilmeldt vores nyhedsbrev.</p> 
-                    </fieldset>
-                  </form>
-            </div>
-        </section>
-
-    <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
-    <footer id="footercontent"></footer>
-
-</main>
-
-<!-- IMPORT JS -->
-<script src="js/nav.js"></script>
-<script src="js/footer.js"></script>
-<script src="js/js.js"></script>
-<!-- IMPORT TIL BANNERS IMPORT-->
-<script src="js/produkt.js"></script>
+    <!-- IMPORT JS -->
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/js.js"></script>
+    <!-- IMPORT TIL BANNERS IMPORT-->
+    <script src="js/produkt.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>
 
 </body>
 </html>

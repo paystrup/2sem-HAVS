@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nikolaj Pejstrup, Karoline Aaby & Christoffer Ingemann">
-    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, 404side, fejlside">
+    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, intro kursus, privat kursus, famillie/gruppe kursus, book kursus">
     <meta name="description" content="HAVS Aarhus er en café, livsstilsbutik og surfshop, der tilbyder kursus i surfing og SUP. Kom og få en uforglemmelig oplevelse i vores butik ved Aarhus Ø, Bassin 7.">
-    <title>HAVS - Fejl 404 Error</title>
+    <title>HAVS - Ordrebekræftelse</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
     <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -21,28 +22,30 @@
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
         <div id="container" class="container"></div>
-
-        <section id="fejlSide" data-aos="fade-up" data-aos-delay="400">
-            <div id="fejlSideBox">
-                <div id="Tekst404">
-                    <h2 data-aos="fade-up">
-                        Ups, noget gik galt...
-                        <br>Surf tilbage igen!
-                    </h2 data-aos="fade-up" data-aos-delay="200">
-                    <a href="index.html" id="buttonMain" data-aos="fade-up" data-aos-delay="400">Gå til forsiden</a>
-                </div>
+        
+        <section id="ordreDone">
+            <h2 data-aos="fade-up">Tak for din bestilling! 🏄✅</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Vi har sendt dig en emailbekræftelse med din kvittering. 
+                <br>Vi glæder os til at se dig på vandet!</p>
+            <div id="ordrenr" data-aos="fade-up" data-aos-delay="400"></div>
+            <div id="visTid" data-aos="fade-up" data-aos-delay="400"></div>
+            <div id="ordreDoneRedirect" data-aos="fade-up" data-aos-delay="400">
+                <a href="index.html" id="buttonMain">Gå til forsiden</a>
+                <a href="kontakt.html" id="buttonOutline">Kontakt os</a>
             </div>
-        </section>
-
-       <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
-       <footer id="footercontent"></footer>
-
+        </section>  
+      <!--FOOTER - CONTENT INSÆTTES FRA FOOTER.JS-->
+      <footer id="footercontent"></footer>
     </main>
     
     <!-- IMPORT JS -->
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/kursusbooking.js"></script>
+    <script src="js/dato.js"></script>
+    <script src="js/ordreDone.js"></script>
+    <script src="js/kurv.js"></script>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

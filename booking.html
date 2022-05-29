@@ -10,6 +10,8 @@
     <title>HAVS - Booking</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
@@ -18,30 +20,30 @@
             <div class="navbar" id="navbar"></div>
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+        <div id="container" class="container"></div>
 
         <header id="bookHvad">
             <div id="bookOversigt">
-                <h1>Hvad ønsker du at booke?</h1>
+                <h1 data-aos="fade-up">Hvad ønsker du at booke?</h1>
                 <div id="bookKnapperne">
-                    <a id="buttonMain" href="kursus.html">Kursus</a>
-                    <a id="buttonOutline" href="udstyr.html">Udstyr</a>
+                    <a id="buttonMain" href="kursus.html" data-aos="fade-up" data-aos-delay="200">Kursus</a>
+                    <a id="buttonOutline" href="udstyr.html" data-aos="fade-up" data-aos-delay="400">Udstyr</a>
                 </div>
             </div>
 
-            <div id="bookingBillede">
-                <img src="media/headerBooking2.png" alt="">
+            <div id="bookingBillede" data-aos="fade-up" data-aos-delay="200">
+                <img src="media/headerBooking2.png" alt="Billede af surfer ved Løkken, der bliver undervist i surfing af HAVS personale.">
             </div>
         </header>
 
-        <section id="bookingBanner">
+        <section id="bookingBanner" data-aos="fade-up" data-aos-delay="200">
             <div id="bBanner">
-                <h2>
+                <h2 data-aos="fade-up">
                     Vi har masser af <br> fede <b>kulturelle events.</b> 
                     <br><span>Tjek dem ud her!</span>
                 </h2>
             </div>
-            <div id="bKnapper">
+            <div id="bKnapper" data-aos="fade-up" data-aos-delay="400">
                 <a id="buttonMain" href="aktiviteter.html#aktiviKommende">Se vores events</a>
             </div>
         </section>
@@ -56,6 +58,14 @@
     <script src="js/nav.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>
     
 </body>
 </html>

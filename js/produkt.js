@@ -9,10 +9,10 @@
 produktSideShopTeaser.innerHTML = `
         <div id="shopTeaser">
             <div id="shopTeaserHeader">
-                <h3>Andre købte også</h3>
-                <a href="shop.html">Gå til shop</a>
+                <h3 data-aos="fade-up">Andre købte også</h3>
+                <a href="shop.html" data-aos="fade-up" data-aos-delay="400">Gå til shop</a>
             </div>
-            <div id="shopNyesteGrid">
+            <div id="shopNyesteGrid" data-aos="fade-up" data-aos-delay="300">
                 <div id="shopNyesteProdukt">
                     <a id="shopProduktLinkBillede" href="havsponcho.html">
                         <img src="media/havs-poncho-navy-1000x850.png" alt="Jersey Poncho fra HAVS, i Navy. Modellen har på billedet også en HAVS Cap på i navy.">
@@ -63,10 +63,10 @@ produktSideShopTeaser.innerHTML = `
 // nyhedsbrev banner
 produktSideNbBanner.innerHTML = `
     <section id="nyhedsbrevShopBanner">
-        <div id="nbShopTekst">
-            <h3>Stay updated, <span>følg med fra starten af vores nye kollektioner.</span></h3>
+        <div id="nbShopTekst" data-aos="fade-up">
+            <h3>Stay updated, <span>følg når vi udgiver nye kollektioner.</span></h3>
         </div>
-        <div id="nbShopTekstInput">
+        <div id="nbShopTekstInput" data-aos="fade-up" data-aos-delay="200">
             <form id="contact" action="#">
                 <fieldset id="f1">
                 <input type="email" id="Email" name="Email" value="" placeholder="Email">
@@ -85,7 +85,7 @@ produktSideNbBanner.innerHTML = `
 // Instagram banner med #HAVSYOURDAY
 produktSideInstaBanner.innerHTML = `
         <section id="blivInspireret">
-            <div id="inspoSkrift">
+            <div id="inspoSkrift" data-aos="fade-up">
                 <h2>
                     <b>Bliv</b> inspireret
                 </h2>
@@ -94,7 +94,7 @@ produktSideInstaBanner.innerHTML = `
                     Med #HAVSYOURDAY
                 </h3> 
             </div>
-            <div id="inspoFotoGalleri">
+            <div id="inspoFotoGalleri" data-aos="fade-up" data-aos-delay="200">
                 <div id="inspoNyesteGrid">
                     <div id="inspoNyesteProdukt">
                         <a id="shopProduktLinkBillede" href="https://www.instagram.com/husethavs/?hl=en">

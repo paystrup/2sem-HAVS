@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nikolaj Pejstrup, Karoline Aaby & Christoffer Ingemann">
-    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, kaffe aarhus, burgers Aarhus, Aarhus Ø, cookies, kaffe, god kaffe Aarhus, bæredygtig">
+    <meta name="keywords" content="HAVS, Løkken, Aarhus, Århus Ø, Bassin 7, Surfing, SUP-boarding, begynderkursus, surf kursus, vandsport, SUP, Østjylland SUP-boarding, surfbutik, café ved Aarhus Ø, surf, livsstilsbutik Aarhus, kaffe aarhus, burgers Aarhus, Aarhus Ø, cookies, kaffe, god kaffe Aarhus, bæredygtig, miljøvenlig butik Aarhus">
     <meta name="description" content="HAVS Aarhus er en café, livsstilsbutik og surfshop, der tilbyder kursus i surfing og SUP. Kom og få en uforglemmelig oplevelse i vores butik ved Aarhus Ø, Bassin 7.">
     <title>HAVS - Menukort</title>
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Import CDN Flickity til carousel slider -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
 </head>
 <body>
@@ -21,10 +23,10 @@
             <div class="navbar" id="navbar"></div>
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+        <div id="container" class="container"></div>
 
         <header id="mkHeader">
-            <div id="menukortHeaderTekst">
+            <div id="menukortHeaderTekst" data-aos="fade-up" data-aos-delay="200">
                 <h6>HAVS Café</h6>
                 <h3>Se vores menukort</h3>
                 <p>
@@ -37,7 +39,7 @@
                 </div>
             </div>
 
-            <div id="menuKortHeaderPic">
+            <div id="menuKortHeaderPic" data-aos="fade-up" data-aos-delay="400">
                 <img src="media/headerMenu.png" alt="HAVS medarbejder i café, der serverer cookies fra menukort">
 
             </div>
@@ -55,15 +57,15 @@
 
         <section id="havsMenukort">
             <div class="havsMenukortItem" id="hovedretter">
-                <h2>Hovedretter</h2>
-                <hr>
-                <div id="hovedretterMenukort"></div>
+                <h2 data-aos="fade-up" data-aos-delay="200">Hovedretter</h2>
+                <hr data-aos="fade-up" data-aos-delay="200">
+                <div id="hovedretterMenukort" data-aos="fade-up" data-aos-delay="300"></div>
             </div>
 
             <div class="havsMenukortItem" id="desserter">
-                <h2>Desserter</h2>
-                <hr>
-                <div id="desserterMenukort"></div>
+                <h2 data-aos="fade-up" data-aos-delay="200">Desserter</h2>
+                <hr data-aos="fade-up" data-aos-delay="200">
+                <div id="desserterMenukort" data-aos="fade-up" data-aos-delay="300"></div>
             </div>
 
             <div id="menukortPicBanner">
@@ -73,19 +75,19 @@
             </div>
 
             <div class="havsMenukortItem" id="drikkevarer">
-                <h2>Kolde drikkevarer</h2>
-                <hr>
-                <div id="drikkevarerMenukort"></div>
+                <h2 data-aos="fade-up" data-aos-delay="200">Kolde drikkevarer</h2>
+                <hr data-aos="fade-up" data-aos-delay="200">
+                <div id="drikkevarerMenukort" data-aos="fade-up" data-aos-delay="300"></div>
             </div>
 
             <div class="havsMenukortItem" id="kaffe">
-                <h2>Kaffe og varme drikke</h2>
-                <hr>
-                <div id="kaffeMenukort"></div>
+                <h2 data-aos="fade-up" data-aos-delay="200">Kaffe og varme drikke</h2>
+                <hr data-aos="fade-up" data-aos-delay="200">
+                <div id="kaffeMenukort" data-aos="fade-up" data-aos-delay="300"></div>
             </div>
         </section>
 
-        <section id="charityBanner">
+        <section id="charityBanner" data-aos="fade-up" data-aos-delay="200">
             <div id="cbTekst">
                 <h3>
                     Støt en god sag.
@@ -116,8 +118,15 @@
     <script src="js/footer.js"></script>
     <script src="js/js.js"></script>
     <script src="js/menukort.js"></script>
-
     <!-- Import CDN Flickity til carousel slider-->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>  
 </body>
 </html>

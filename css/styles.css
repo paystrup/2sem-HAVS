@@ -73,7 +73,31 @@ p{
     text-align: center;
 }
 
-#buttonMain{
+#buttonBlack{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 15px 40px;
+    font-size: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    color: var(--black);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--white);
+}
+
+#buttonBlack:hover{
+    transition: 0.5s;
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+#buttonMain, #buttonKursus{
     font-family: var(--mainfont);
     white-space: nowrap;
     text-decoration: none;
@@ -224,6 +248,14 @@ p{
 }
 
 #buttonMain:hover{
+    background: var(--black);
+    color: var(--white);
+    transition: 0.5s;
+    cursor: pointer;
+    border-color: var(--black);
+}
+
+#buttonKursus:hover{
     background: var(--black);
     color: var(--white);
     transition: 0.5s;
@@ -877,17 +909,16 @@ header{
 }
 
 #aktivitekst{
-
     padding-bottom: 2.5rem;
 }
 
-#aktivitettop h1{
+#aktivitettop h2{
     font-family: var(--mainfont);
-    font-weight: 400;
-    line-height: 140%;
+    font-weight: 600;
+    line-height: var(--lineheight);
     font-size: 3.5rem;
     padding-bottom: 2rem;
-    max-width: 17ch;
+    max-width: 15ch;
 }
 
 #aktivitettop p{
@@ -896,7 +927,7 @@ header{
     font-family: var(--mainfont);
     color: var(--gray);
     max-width: 44ch;
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
 }
 
 #aktivibillede{
@@ -1299,7 +1330,6 @@ header{
     color: var(--gray);
     max-width: 50%;
     width: 44ch;
-
 }
 
 /* 404 SIDE */
@@ -1603,6 +1633,14 @@ header{
     gap: 3rem;
 }
 
+#insertKurser{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
 #kursusCard{
     font-size: 1.1rem;
     font-family: var(--mainfont);
@@ -1610,6 +1648,162 @@ header{
     height: auto;
     display: flex;
     flex-direction: row;
+}
+
+#kursusCard2{
+    font-size: 1.1rem;
+    font-family: var(--mainfont);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#kCardPrisCTA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#buyKursus{
+    display: flex;
+    gap: 10%;
+    padding-bottom: 6rem;
+}
+
+#kursusKnapper1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kursusKurv{
+    font-family: var(--mainfont);
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#kursusNext{
+    display: flex;
+    gap: 10px;
+}
+
+#ordersList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+#ordersList li{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    list-style-type: none;
+}
+
+#kursusSteps{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kursusSteps2{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 5rem;
+}
+
+#kursusDatoInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#kursusDatoForm{
+    padding-bottom: 5rem;
+}
+
+#visDato{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    font-family: var(--mainfont);
+}
+
+#visDato h4{
+    font-size: 1.5rem;
+}
+
+#kursusSteps img{
+    width: 50%;
+}
+
+#ordersList button{
+    font-family: var(--mainfont);
+    white-space: nowrap;
+    text-decoration: none;
+    border-style: none;
+    font-weight: 500;
+    padding: 10px 10px;
+    font-size: 1rem;
+    background: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--blue);
+}
+
+#orders{
+    font-family: var(--mainfont);
+}
+
+#ordersList button:hover{
+    cursor: pointer;
+    border-color: var(--black);
+    background: var(--black);
+    color: var(--white);
+    transition: 0.7s;
+}
+
+#sum{
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+#kursusKurvHeader h4{
+    font-size: 2rem;
+    font-family: var(--mainfont);
+    margin-bottom: 1rem;
+}
+
+#chooseKursus{
+    font-family: var(--mainfont);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#chooseKursus h2{
+    font-size: 3.5rem;
+    padding-bottom: 6rem;
 }
 
 #kursusCardPic{
@@ -1620,6 +1814,10 @@ header{
 #kursusCardPic img{
     width: 100%;
     height: 100%;
+}
+
+#kursusKurv{
+    padding-bottom: 4rem;
 }
 
 #kursusCardDescription{
@@ -1663,7 +1861,7 @@ header{
 
 #kursusKnapper{
     display: flex;
-    gap: 10px;
+    gap: 5px;
     padding-top: 1rem;
 }
 
@@ -1781,7 +1979,7 @@ header{
 
 
 /* Ikoner i placeholder*/ /* https://www.w3schools.com/howto/howto_css_animated_search.asp */
-#navn, #mail, #besked{
+#navn, #mail, #besked, #mobil, #postnr{
     box-sizing: border-box;
     border: 2px solid var(--lightgray);
     border-radius: 8px;
@@ -1806,6 +2004,88 @@ header{
 #besked {
     background-image: url('/media/message.svg');
 } 
+
+#mobil {
+    background-image: url('/media/phoneform.svg');
+} 
+
+#postnr {
+    background-image: url('/media/searchform.svg');
+} 
+
+/* BOOKINING - KURV*/
+#kurvFormHeader2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--mainfont);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    background-color: var(--lightgray);
+}
+
+#kurvFormHeader, #kurvFormHeader2 h2{
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--black);
+}
+
+#kurvFormHeader a{
+    font-size: 1rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    text-decoration: none;
+}
+
+#kurvFormHeader a:hover{
+    opacity: 0.5;
+    transition: 0.7s;
+}
+
+#kurvFormHeader{
+    font-family: var(--mainfont);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    background-color: var(--lightgray);
+}
+
+#kurvForm{
+    padding-top: 1rem;
+    display: flex;
+    gap: 5rem;
+}
+
+#kurvForm fieldset{
+    width: 50%;
+    border: none;
+}
+
+#kurvFormHeader label, input, textarea{
+    font-size: 1.1rem;
+    line-height: var(--lineheight);
+    font-family: var(--mainfont);
+    color: var(--black);
+}
+
+#kurvFormHeader input, textarea{
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+#visOrdre{
+    padding-top: 2rem;
+}
+
+#ordersKurv{
+    display: flex;
+}
 
 /* HAVS SHOP - SIDE */
 .shopHeaderSection{
@@ -1893,7 +2173,7 @@ header{
 }
 
 /* KNAP TIL SHOP PRODUKTER UNDERSIDER - VÆLG STØRRELSE*/
-input[type=text], select, textarea{
+input[type=text], input[type=date], select, textarea{
     font-family: var(--mainfont);
     font-weight: 300;
     white-space: nowrap;
@@ -2085,6 +2365,7 @@ input[type=text], select, textarea{
 }
 
 #shopProduktButtons{
+    font-family: var(--mainfont);
     display: flex;
     gap: 10px;
     padding-bottom: 4rem;
@@ -2100,6 +2381,7 @@ input[type=text], select, textarea{
     width: 100%;
 }
 
+/* INSPO #HAVSYOURDAY BANNER - PRODUKT.JS */
 #blivInspireret{
     padding-top: 10rem;
     padding-left: 10rem;
@@ -2204,31 +2486,31 @@ input[type=text], select, textarea{
     line-height: var(--lineheight);
     font-family: var(--mainfont);
     transition: 0.4s;
-  }
+}
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
     background-color: var(--blue);
     color: var(--white);
-  }
+}
 
-  .accordion:after {
+.accordion:after {
     content: url('/media/faq.svg');
     /*background-color: var(--black);*/
     float: right;
     height: 1.54em;
     width: 1.54em;
-  }
+}
 
-  .active:after {
+.active:after {
     content: url('/media/faq.svg');
     transform: rotate(180deg);
     float: right;
     /*filter: invert(100%);*/
-  }
+}
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
+.panel{
     padding: 1em 2em;
     background-color: var(--white);
     font-size: 1.2rem;
@@ -2493,6 +2775,43 @@ input[type=text], select, textarea{
     width: 500px;
 }
 
+/* ORDREBEKRÆFTELSE */
+#ordreDone{
+    font-family: var(--mainfont);
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#ordreDone h2{
+    font-size: 4rem;
+}
+
+#ordreDone p{
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#visTid{
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+#visTid h4{
+    font-size: 1.5rem;
+}
+
+#ordreDoneRedirect{
+    display: flex;
+    gap: 10px;
+}
+
 /* NAVBAR */
 .navbar{
     z-index: 99;
@@ -2682,6 +3001,393 @@ nav{
     .logo{
         margin-right: auto;
     }
+
+    /* OM OS - Underside */
+    #hvadErHavs{
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 8rem;
+        padding-bottom: 5rem;
+        height: 100%;
+        min-width: 100%;
+    }
+
+    #hvadhavsBillede{
+        min-width: 100%;
+    }
+
+    #hvadErHavs p{
+        padding-bottom: 4rem;
+        min-width: 100%;
+    }
+
+    #hvadtekst{
+        min-width: 100%;
+    }
+
+    #frederik{
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    
+    #frederikTekst{
+        padding-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
+    
+    #frederikTekst h3{
+        min-width: 100%;
+    }
+
+    #frederikBillede{
+        width: 100%;
+        height: auto;
+    }
+
+    #omosHistorie{
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #historieTekst{
+        min-width: 100%;
+    }
+    
+    #tekstMemo{
+        min-width: 100%;
+    }
+
+    #vesterStemning{
+        flex-direction: column;
+        height: 100%;
+        min-width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    #vesterBillede{
+        min-width: 100%;
+        height: 100%;
+       
+    }
+    
+    #vesterTekst{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 1.5rem;
+        background-color: var(--beige);
+        min-width: 100%;
+    }   
+    
+    #vesterTekst h3{
+        font-size: 2.5rem;
+        padding-bottom: 1.5rem;
+        text-underline-offset: 0.8rem;
+    }
+
+
+    /* BOOKING - UNDERSIDE */
+    #bookHvad{
+        flex-direction: column;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 8rem;
+    }
+    
+    #bookOversigt{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #bookingBillede{
+        min-width: 100%;
+        height: 100%;
+    }
+    
+
+    #bookingBillede img{
+        width: 100%;
+        height: auto;
+    }
+
+    #bookingBanner{
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        gap: 5rem;
+        padding-bottom: 8rem;
+        padding-top: 8rem;
+    }
+    
+    #bKnapper{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;  
+    }
+    
+    #bBanner{
+        min-width: 100%;
+    }
+
+    #bBanner h2{
+        width: 100%;
+    }
+
+    /* KURSUS - UNDERSIDE */
+    #voresKursus{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #kursusCard{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #insertKurser{
+        gap: 0rem;
+    }
+    
+    #kursusCardDescription{
+        min-width: 100%;
+    }
+
+    #kursusCardPic{
+       width: 100%;
+       height: auto;
+    }
+
+    #kursusCardPic img{
+        width: 100%;
+        height: auto;
+    }
+
+    #udstyrsBanner{
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+       
+    }
+
+    #udstyrKnapper{
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    #udsBanner{
+        flex-direction: column;
+        
+    }
+
+    
+    /* SHOP PRODUKTSIDE */
+    #goBack{
+        padding-left: 2rem;
+    }
+    
+    #shopProduktHeaderSection{
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #shopProduktHeaderTekst{
+        width: 100%;
+    }
+
+    #shopProduktButtons{
+        display: flex;
+        justify-content: space-between;
+   
+    }
+
+    #shopBillede{
+        width: 100%;
+        height: auto;
+    }
+
+    #shopBillede img{
+        height: auto;
+        width: 100%;
+    }
+
+    /* SHOP TEASER */
+    #shopTeaser{
+        width: 100%;
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #shopTeaserHeader h3{
+        font-size: 2rem;
+    }
+
+    #shopTeaserGrid{
+        width: 100%;
+    }
+
+    #shopTeaserProdukt img{
+        height: auto;
+        width: 100%;
+        padding-bottom: 1.5rem;
+    }
+
+    #shopNyesteProdukt {
+        min-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* NYHEDSBREV BANNER PRODUKT.JS*/
+    #nyhedsbrevShopBanner{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 6rem 3rem;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    
+    #nyhedsbrevShopBanner input{
+        border-radius: 8px;
+        width: 100%;
+        padding: 10px 40px;
+    }
+    
+    #f1{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #nbShopTekst{
+        width: 100%;
+    }
+    
+    #nbShopTekst h3{
+        font-size: 2.5rem;
+    }
+
+    /* HAVSYOURDAY BANNER - PRODUKT.JS */
+    #blivInspireret{
+        padding-top: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    #inspoSkrift h2{
+        font-family: var(--mainfont);
+        font-weight: 200;
+        font-size: 3.5rem;
+    }
+    
+    #hashtaghavs h3{
+        font-family: var(--headers);
+        font-weight: 200;
+        line-height: var(--lineheight);
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    #inspoFotoGalleri{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 2.5rem;
+    }
+    
+    #inspoNyesteProdukt img{
+        width: 100%;
+    }
+    
+    #inspoNyesteProdukt{
+        max-width: 100%;
+    }
+    
+    /* FOOTER */
+    #footerMenuLinks{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #footerMenu{
+        text-align: center;
+    }
+
+    footer a{
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    footer a:hover{
+        opacity: 0.5;
+        text-decoration: underline;
+        transition: .5s;
+    }
+
+    #footerFindOs{
+        text-align: center;
+    }
+
+    #footerFindOsContact{
+        flex-direction: column;
+    }
+
+    #footerKontakt{
+        text-align: center;
+
+    }
+
+    #footerKontaktCTA{
+        padding-bottom: 4rem;
+    }
+
+    #footerKontaktCTA svg{
+        padding-right: 1rem;
+    }
+
+    #footerKontaktSome{
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 2rem 2rem 2rem;
+        gap: 2rem;
+    }
+    
+
+
+
 }
 
 @media screen and (max-width: 960px) {

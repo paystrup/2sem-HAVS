@@ -10,10 +10,10 @@
 kursusTeaser.innerHTML = `
         <div id="shopTeaser">
             <div id="shopTeaserHeader">
-                <h3>Måske er du interesseret i</h3>
-                <a href="aktiviteter.html">Gå til vores aktiviteter</a>
+                <h3 data-aos="fade-up">Måske er du interesseret i</h3>
+                <a href="aktiviteter.html" data-aos="fade-up" data-aos-delay="400">Gå til vores aktiviteter</a>
             </div>
-            <div id="shopNyesteGrid">
+            <div id="shopNyesteGrid" data-aos="fade-up" data-aos-delay="200">
                 <div id="shopNyesteProdukt">
                     <a id="shopProduktLinkBillede" href="havsponcho.html">
                         <img src="media/havs-poncho-navy-1000x850.png" alt="Jersey Poncho fra HAVS, i Navy. Modellen har på billedet også en HAVS Cap på i navy.">

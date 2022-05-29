@@ -11,6 +11,8 @@
     <link rel="shortcut icon" href="media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/ile5cyj.css">
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
@@ -19,9 +21,9 @@
             <div class="navbar" id="navbar"></div>
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+        <div id="container" class="container"></div>
 
-        <header id="goBackHeader">
+        <header id="goBackHeader" data-aos="fade-up">
             <div id="goBack">
                 <a href="kursus.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"/></svg> Gå tilbage</a>
             </div>
@@ -29,8 +31,8 @@
 
         <section id="bookingHeaderSection">
             <div id="bookingHeaderTekst">
-                <h2>Privat surf & SUP kursus</h2>
-                 <p>
+                <h2 data-aos="fade-up" data-aos-delay="200">Privat surf & SUP kursus</h2>
+                 <p data-aos="fade-up" data-aos-delay="300">
                     Få en privat instruktør med ud på vandet.<br> 
                     Med et privat kursus får du mere 1-til-1 hjælp, og dermed mere forståelse af vandet og bølgerne.
                     Inkl. alt udstyr. Våddragt, sko, handsker, surf board og hætte i de kolde måneder.
@@ -40,18 +42,18 @@
                     <br><br><b>Pris:</b> 399 DKK pr. person
 
                 </p>
-                <div id="bookingButtons">
-                    <a id="buttonMain" href="404.html">Book nu</a>
+                <div id="bookingButtons" data-aos="fade-up" data-aos-delay="400">
+                    <a id="buttonMain" href="kursusbooking2.html">Book nu</a>
                 </div>
             </div>
 
-            <div id="bookingHeaderBillede">
+            <div id="bookingHeaderBillede" data-aos="fade-up" data-aos-delay="200">
                 <img src="media/headerBookintro.png" alt="Surf skolens oversigt over kurser og priser, ved HAVS café">
             </div>
         </section>
 
 
-        <section id="sectionFaq">
+        <section id="sectionFaq" data-aos="fade-up" data-aos-delay="200">
             <h2>Ofte stillede spørgsmål</h2>
             <!-- https://www.w3schools.com/howto/howto_js_accordion.asp -->
             <article id="faqKontakt">
@@ -112,6 +114,14 @@
     <script src="js/js.js"></script>
     <!-- TIL IMPORT AF DYNAMISK BANNER MED TEASER TIL KURSER OG AKTIVITETER -->
     <script src="js/kursusbanner.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>
     
 </body>
 </html>

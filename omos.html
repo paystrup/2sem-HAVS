@@ -15,6 +15,8 @@
     <!-- API mapbox -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <!--Import AOS Animationer https://michalsnik.github.io/aos/ -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
@@ -23,10 +25,10 @@
             <div class="navbar" id="navbar"></div>
         </nav>
         <!-- HAMBURGER MENU CONTENT INDSÆTTES FRA NAV.JS- -->
-        <div class="container"></div>
+        <div id="container" class="container"></div>
 
         <header id="hvadErHavs">
-            <div id="hvadtekst">
+            <div id="hvadtekst" data-aos="fade-up" data-aos-delay="200">
                 <h1>Hvad er HAVS?</h1>
                 <p>
                     Hos os er der plads til alle, om du vil på vandet eller blot forbi til en kop lokalristet kaffe. Vi er et mangfoldigt univers, hvor du finder både surfing, café og en livsstilsbutik. 
@@ -37,18 +39,17 @@
                 <a id="buttonMain" href="#frederik">Læs mere</a>
 
             </div>
-            <div id="hvadhavsBillede">
+            <div id="hvadhavsBillede" data-aos="fade-up" data-aos-delay="300">
                 <img src="media/headerOmOs.png" alt=" Indenfor i HAVS restaurant, en stille dag hvor bordene er tomme, masser af sol og lys."> 
             </div>
         </header>
 
-        <section id="frederik">
+        <section id="frederik" data-aos="fade-up" data-aos-delay="200">
             <div id="frederikTekst">
                 <h3>Vi er et <b> univers</b>, hvor der er <b>plads til <u>alle.</u></b></h3>
             </div> 
-            <div id="frederikBillede">
-                
-            </div>  
+            <!--BG indsat med CSS -->
+            <div id="frederikBillede"></div>  
         </section>
 
         <!-- FLICKITY.JS CAROUSEL -->
@@ -62,7 +63,7 @@
         </div>
 
         <section id="omosHistorie">
-            <div id="historieTekst">
+            <div id="historieTekst" data-aos="fade-up" data-aos-delay="200">
                 <p>
                     HAVS blev opstartet i Løkken i 2015, og er nu landet ved Aarhus Ø, Bassin 7. 
                     <br><br>
@@ -75,7 +76,7 @@
                     Stemningen er i top, og du møder os altid i øjenhøjde. For os er du en del af fællesskabet, når du træder ind i butikken.
                 </p>
             </div>
-            <div id="tekstMemo">
+            <div id="tekstMemo" data-aos="fade-up" data-aos-delay="300">
                 <p>
                     Vores råvarer er lokale. Fiskene kommer fra fiskere i nærområdet, kødet og grønt fra gårdene omkring os. Dette gør vi i overensstemmelse med vores værdier om en grønnere verden, og en større respekt for naturen omkring os.
 
@@ -92,7 +93,7 @@
             </div>
         </section>
 
-        <section id="vesterStemning">
+        <section id="vesterStemning" data-aos="fade-up" data-aos-delay="200">
             <div id="vesterBillede">
             </div>
             <div id="vesterTekst">
@@ -119,9 +120,16 @@
     <script src="js/footer.js"></script>
     <script src="js/map.js"></script>
     <script src="js/js.js"></script>
-    
     <!-- Import CDN Flickity til carousel slider-->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>    
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 650,
+            once: true,
+        })
+    </script>   
     
 </body>
 </html>
