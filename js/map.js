@@ -1,11 +1,10 @@
 // MAPBOX
-
-// Inspiration: https://docs.mapbox.com/mapbox-gl-js/example/set-popup/
+// Inspiration og kilde: https://docs.mapbox.com/mapbox-gl-js/example/set-popup/
 
 // accessToken for kortet
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2Fyb2xpbmVhYWJ5IiwiYSI6ImNsMHFlY2xhODI5NzEzZnFrbzB6Nzhwb2IifQ.yRyC01-4DeWoifSLBpA-Ng';
 
-// Tilføjet min egen position til HAVS Aarhus Ø
+// Tilføjet egen position til HAVS Aarhus Ø
 const aarhus = [10.226554, 56.163560]
 
 const map = new mapboxgl.Map({
@@ -17,15 +16,15 @@ const map = new mapboxgl.Map({
   zoom: 14.6,
   pitch: 0, //måles i grader
   bearing: 0, //måles i grader
-  customAttribution: '&copy; HAVS'
+  customAttribution: '&copy; HAVS' // copyright sign til bunden af kortet
 });
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-map.scrollZoom.disable();
+map.scrollZoom.disable(); // disable zoom, så kortet ikke zoomer, når man scroller igennem siden, da den er width 100%
 
-// create the popup
+// lav ny popup
 const popup = new mapboxgl.Popup({
   offset: 36
 }).setHTML(
@@ -41,7 +40,7 @@ const popup = new mapboxgl.Popup({
 const el = document.createElement('div');
 el.id = 'marker';
 
-// create the marker
+// lav en ny marker og indsæt popup + add til kortet
 new mapboxgl.Marker(el)
   .setLngLat(aarhus)
   .setPopup(popup) // sets a popup on this marker

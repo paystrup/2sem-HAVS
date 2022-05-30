@@ -43,7 +43,7 @@ fetch('json/events.json')
             </div>
           </div>
           <div class="eventCTA">
-            <button class="eventBtn">Deltag</button>
+            <a class="eventBtn" href="404.html">Deltag</a>
           </div>
         </div>
       `

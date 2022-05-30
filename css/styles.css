@@ -16,7 +16,6 @@ html{
 /* IMPORT FONTS */
 @import "fonts.css";
 
-
 /* VARIABLER */
 :root {
     color: var(--black);
@@ -1202,7 +1201,7 @@ header{
     max-width: 50%;
 }
 
-#hvadErHavs h1{
+#hvadErHavs h2{
     font-family: var(--headers);
     font-weight: 600;
     line-height: 140%;
